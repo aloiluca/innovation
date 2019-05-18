@@ -44,26 +44,26 @@ session_start();    // Start della sessione
         <!--  <a id="myHambuger" href=""><i class="fa fa-bars"</i></a>-->
 
         <!-- Elementi della nav bar-->
-        <a href="/im-ict/index.php">HOME</a>
-        <a href="/im-ict/news.php">NEWS</a>
-        <a href="/im-ict/tools.php">TOOLS</a>
-        <a href="/im-ict/community.php">COMMUNITY</a>
-        <a href="/im-ict/chiSiamo.php">CHI SIAMO</a>
+        <a href="/innovation/index.php">HOME</a>
+        <a href="/innovation/news.php">NEWS</a>
+        <a href="/innovation/tools.php">TOOLS</a>
+        <a href="/innovation/community.php">COMMUNITY</a>
+        <a href="/innovation/chiSiamo.php">CHI SIAMO</a>
 
         <?php
         if ( isset( $_SESSION['admin'])) {
             echo'                    
-                    <a href="/im-ict/admin.php">Gestione Utenti</a>
-                    <a href="/im-ict/admin-articoli.php">Gestione Articoli</a>
+                    <a href="/innovation/admin.php">Gestione Utenti</a>
+                    <a href="/innovation/admin-news.php">Gestione Articoli</a>
                    
                 ';
         }
 
         /* Login / Logout e logo utente da fontAwesome */
         if ( isset( $_SESSION['logged']) ){
-            echo '<a style="float: right" href="/im-ict/logout.php"><i class="fas fa-user"></i> LOG-OUT</a>';
+            echo '<a style="float: right" href="/innovation/logout.php"><i class="fas fa-user"></i> LOG-OUT</a>';
         } else {
-            echo '<a style="float: right" href="/im-ict/login.php"><i class="fas fa-user"></i> LOG-IN</a>';
+            echo '<a style="float: right" href="/innovation/login.php"><i class="fas fa-user"></i> LOG-IN</a>';
         }
         ?>
     </div>

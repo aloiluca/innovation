@@ -33,11 +33,11 @@ if ( isset( $_POST['submit-button'])) {
 
                     if ($row['admin'] == TRUE) {
                         $_SESSION['admin'] = TRUE;
-                        header("Location: /im-ict/admin.php");
+                        header("Location: /innovation/admin.php");
                         exit;
                     } else {
                         /* Reindirizzo a community.php */
-                        header("Location: /im-ict/community.php");
+                        header("Location: /innovation/community.php");
                         exit;
                     }
 
