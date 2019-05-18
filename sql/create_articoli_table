@@ -1,0 +1,28 @@
+CREATE TABLE `innovation`.`articoli` (
+    `id` INT NOT NULL AUTO_INCREMENT ,
+    `titolo` VARCHAR(50) NOT NULL ,
+    `sottotitolo` VARCHAR(100) NULL ,
+    `autore` VARCHAR(20) NOT NULL ,
+    `corpo` VARCHAR(500) NOT NULL ,
+    `categoria` VARCHAR(50) NOT NULL ,
+    `data` DATE NOT NULL ,
+    `preview` VARCHAR(300) NOT NULL,
+    `gdrive` VARCHAR(200) NOT NULL,
+        PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `preview`, `gdrive`)
+    VALUES (1,'TITOLO','SOTTOTITOLOLOLOLOOOOOOOOOOO','admin','Lorem Ipsum è un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo
+        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
+        campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione,
+        pervenendoci sostanzialmente inalterato. Fu','prova', CURRENT_DATE, 'Lorem Ipsum è un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum è considerato il testo...', 'http://bit.ly/2VqXt7q');
+
+
+INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `preview`, `gdrive`)
+    VALUES (2,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','admin','Lorem Ipsum è un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo
+        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
+        campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione,
+        pervenendoci sostanzialmente inalterato. Fu','prova', CURRENT_DATE, 'Lorem Ipsum è un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum è considerato il testo...', 'http://bit.ly/2VqXt7q');

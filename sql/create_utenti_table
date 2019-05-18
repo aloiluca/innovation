@@ -1,0 +1,27 @@
+/* Questo file è SQL, linguaggio per database relazionali:
+ * Con questo statement creiamo la tabella user con vari attributi.
+ * Inseriamo poi il primo utente.
+ *
+ * Potete eseguire il codice andando su phpMyAdmin nella sezione SQL.
+ */
+
+CREATE TABLE `innovation`.`utenti` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `nome` VARCHAR(50) NOT NULL ,
+    `cognome` VARCHAR(50) NOT NULL ,
+    `email` VARCHAR(50) NOT NULL ,
+    `password` VARCHAR(100) NOT NULL ,
+    `admin` BOOLEAN NOT NULL ,
+    PRIMARY KEY (id),
+    UNIQUE `email` (`email`(50))) ENGINE = InnoDB;
+
+/* la password è lo sha1() della stringa 'admin' */
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (1,'root','root','root@info.it','d033e22ae348aeb5660fc2140aec35850c4da997', TRUE);
+
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (2,'test','test','teest@info.it','a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', FALSE);
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (3,'prova','prova','prova@info.it','6279886fde090b3038f267098bcca771a6efa946', FALSE);
