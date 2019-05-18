@@ -1,0 +1,613 @@
+html {
+    /* Float e left saranno sempre settati*/
+    float: left;
+    width: 100%;
+}
+
+/* Definizione del body*/
+body {
+    float: left;
+    width: 100%;
+    height: auto;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: auto;
+    background-color: #242626;
+}
+
+header {
+    float: left;
+    width: 100%;
+}
+
+button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+
+}
+
+.navbar #logo {
+    float: left;
+    /*width: 10%;*/
+}
+
+.navbar #logo a:hover {
+    background-color: #00665c;
+}
+.navbar #logo a img {
+    width: 55px;
+    height: auto;
+}
+
+.navbar {
+    background-color: #00665c ;
+    overflow: visible;
+    float: left;
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.5% 1.5%;
+    text-decoration: none;
+    font-size: 1.3em; /* @todo ??? non funge */
+    font-weight: bold;
+}
+
+/* Cambio del link color all'evento :hover */
+.navbar a:hover {
+    background-color: #232F34 ; /*rgb(221,164, 21)*/
+    color: white;
+}
+
+#myHambuger {
+    display: none;
+    float: right;
+}
+
+.index-letter {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+}
+
+.index-letter #letter-img-left img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.index-letter #letter-img-right img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Contenitore lettera 50%*/
+.index-letter #letter-img-left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/* Contenitore lettera 50%*/
+.index-letter #letter-img-right {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+/* Contenitore descrizione lettera 50%*/
+.index-letter #let-desc{
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    line-height: 118%;
+    word-spacing: 1.9px;
+
+
+}
+
+#letter-img-left img.resized {
+    width: 100px;
+    height: auto; }
+
+
+.index-letter p {
+    float: left;
+    margin-top: 5%;
+    height: 100%;
+    vertical-align: center;
+}
+
+.footer {
+    background-color: rgb(24,26,26);
+    width: 100%;
+    overflow:hidden;
+    height: 380px;
+}
+
+.footerFloat a{
+    color: rgb(221, 164, 21);
+    text-decoration: none;
+}
+
+.footerFloat {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 60px 0px;
+    padding: 40px 60px;
+    float: left;
+    border-right: 1px solid grey;
+}
+
+.footerFloat p {
+    color: whitesmoke;
+    display: inline-block;
+    position: relative;
+    bottom: 320px;
+    left: 396px;
+
+}
+
+.footerFloat ul li{
+    font-size: 150%;
+    list-style-type: disc;
+    color: whitesmoke;
+}
+
+.instagram{
+    position: relative;
+    bottom: 310px;
+    left: 300px;
+    width: 350px;
+    display: block;
+
+}
+
+.logo {
+    position: relative;
+    bottom: 45px;
+
+    width: 290px;
+    display: block;
+
+}
+
+.underFooter {
+    font-size: 100%;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: whitesmoke;
+    background-color: rgb(24,26,26);
+}
+
+
+
+
+
+
+/* login e register */
+.form {
+    float: left;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: auto;
+    background-color: #00665c;
+    color: #cccccc;
+    border-radius: 30px;
+}
+
+
+
+#argomenti {
+    color: white;
+    margin:20%;
+}
+
+.listaarg {
+    margin-top: 40%;
+}
+
+
+.content-body {
+    float: left;
+    width: 98%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.searchbar {
+    margin-top: 8%;
+    color:white;
+
+}
+.searchbar h1 {
+    color:white;
+    font-size: 280%;
+    text-align: center;
+}
+
+.argomenti {
+    text-align: center;
+}
+
+.cerca {
+    margin-left: 40%;
+    width: 20%;
+    text-align: center;
+    border-radius: 60%/20%;
+}
+
+.articolo {
+    float: left;
+    width: 18%;
+    height: 16%;
+    padding: 3% ;
+    padding-top: 8%;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    margin-bottom: 10%;
+    background-color: #232F34;
+    box-shadow: inset 5px 5px 5px #161e22;
+    color: white;
+    border-radius: 20%;
+}
+
+.articolo:hover {
+    background-color: #232f34;
+    box-shadow: 5px 5px 5px #161e22;
+
+}
+
+
+
+.tool {
+    float: left;
+    width: 80%;
+    padding: 3% ;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 7%;
+    background-color: #232F34;
+    box-shadow: inset 5px 5px 5px #161e22;
+    color: white;
+}
+
+.tool:hover {
+    background-color: #232f34;
+    box-shadow: 5px 5px 5px #161e22;
+
+}
+
+
+
+
+
+
+#p {background-color: rgba(255, 255, 255, 0.5)}
+
+
+
+/* Full-width inputs */
+/*input[type=text], input[type=password], input[type=email] {
+    width: 70%;
+    padding: 12px 20px;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-bottom: 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}*/
+
+/* Set a style for all buttons */
+.register-button {
+    float: left;
+    width: 30%;
+    background-color: transparent;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-register-button {
+    float: left;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1.5%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    border-radius: 15px;
+    background-color: #72DEFF;
+    box-sizing: content-box;
+}
+
+.register-field-a {
+    float: left;
+    width: 26.5%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-left: 12%;
+    margin-bottom: 4%;
+    /*display: inline-block;*/
+}
+
+.register-field-a:focus {
+    border: 2px solid #72DEFF;
+    border-radius: 4px;
+}
+
+.register-field-b {
+    float: left;
+    width: 50%;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 23%;
+    border-radius: 3px;
+}
+
+.register-field-b:focus {
+    border: 2px solid #72DEFF;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.login-button {
+    float: left;
+    width: 20%;
+    margin-left: 25%;
+    margin-bottom: 4%;
+    padding: 1%;
+    margin-top: 2%;
+    border-radius: 15px;
+    background-color: #72DEFF;
+}
+
+.form-label {
+    float: left;
+    width: 20%;
+
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 4%;
+    border-radius: 3px;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.imgcontainer i {
+    font-size: 7rem;
+}
+
+
+
+/* Add padding to containers */
+.form-input {
+    padding: 5%;
+    stroke: black;
+    margin-bottom: 10%;
+}
+
+.form-container-button {
+    float: left;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+
+.form-input a {
+    color: #72DEFF;
+    text-decoration: none;
+}
+
+.form-input p {
+    color: #72DEFF;
+    text-align: center;
+}
+
+
+.testo {
+    width: 60%;
+    margin-left: 20%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 170%;
+    color:white;
+    line-height: 220%;
+    word-spacing: 18px ;
+
+}
+
+
+.titolotesto {
+    width: 60%;
+    margin-left: 20%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 200%;
+    color:white;
+}
+.divtesto h5{
+    width: 60%;
+    margin-left: 74%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    text-align: right;
+    color:white;
+}
+
+
+.filtri{
+    font-size: 140%;
+    color:white;
+    text-align: center;
+
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
+.table tr:nth-child(even) {
+    background-color: rgb(24,26,26);
+    color: #cccccc;
+}
+
+.table th {
+    background-color: #00665c;
+    color: white;
+}
+
+
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+
+
+}
+
+/* Con schermo più piccolo di 1000px nascondo
+ * gli elementi della navbar e mostro l'hamburger*/
+@media screen and (max-width: 1000px) {
+    .navbar a {
+        display: none;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /*#myHambuger {
+        display: block;
+        text-align: center;
+        background-color: #232F34;
+    }*/
+
+    .footer a {
+        float: left;
+        display: none;
+    }
+}
+
+/* CHI SIAMO */
+
+
+.divblock {
+    width: 100%;
+}
+
+.left-profile  {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+
+.central-profile  {
+    float: right;
+    width: 33.3%;
+    text-align: center;
+    padding-right: 10%;
+}
+
+.right-profile  {
+    float: right;
+    width: 33.3%;
+    text-align: center;
+}
+
+.mezzo-profile {
+    float: left;
+    width: 66.5%;
+}
+
+.riga-profile {
+    float: left;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.left-profile, .central-profile, .right-profile label {
+    color: #ffffff;
+}
+
+.titolochisiamo h1 {
+    color: #cccccc;
+    text-align: center;
+}
+
+#contattacileft label {
+    color: #cccccc;
+    text-align: center;
+    font-size: large;
+}
+
+#contattacileft {
+    float: left;
+    text-align: left;
+    padding-left: 20%;
+}
+
+#contattaciright {
+    float: right;
+    text-align: left;
+    padding-right: 20%;
+}
+
+
+/* Fine CHISIAMO */
