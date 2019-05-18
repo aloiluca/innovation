@@ -1,5 +1,5 @@
 <?php
-include_once('partials/header.php');
+require 'partials/header.php';
 if ($_SESSION['logged']) {
     echo 'Welcome '.$_SESSION['user_name'];
 } else {
@@ -7,6 +7,6 @@ if ($_SESSION['logged']) {
     header("Location: /innovation/login.php");
 }
 
-include_once('partials/footer.php');
+require 'partials/footer.php';
 
 ?>

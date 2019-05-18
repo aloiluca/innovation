@@ -1,5 +1,6 @@
 <?php
-    include_once('partials/header.php');
+
+require 'partials/header.php';
 ?>
 
 <div class="content-body">
@@ -55,5 +56,5 @@
 
 
 <?php
-    include_once('partials/footer.php')
+require 'partials/footer.php';
 ?>
