@@ -1,0 +1,87 @@
+<?php
+include_once('partials/header.php');
+require 'config/database.php';
+
+
+
+/* Se submit button è settato: */
+if (isset($_POST['submit-button'])) {
+
+    /* Se nome, cognome, email e password sono setta: */
+    if (!empty($_POST['nome']) && !empty($_POST['cognome']) && !empty($_POST['email'])
+        && !empty($_POST['password']) && !empty($_POST['password_verify'])) {
+
+        $nome = trim($_POST['nome']);
+        $cognome = trim($_POST['cognome']);
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
+        $pwd_verify = trim($_POST['password_verify']);
+
+
+        /* Se le 2 password combaciano: altrimenti errore. */
+        if ($password == $pwd_verify) {
+            $hash = sha1($pwd_verify);
+        } //        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
+
+        else {
+            echo '<div class="error-message">Le 2 password no cambaciano, riprova.</div>';
+            header("refresh:5'; Location: /im-ict/register.php");
+        }
+
+        $sql = "SELECT * FROM utenti where email = '" . $email . "';";
+        $result = mysqli_query($conn, $sql);
+
+        /* Se $result è = 0 l'utente non è registato*/
+        if (mysqli_num_rows($result) == 0) {
+
+            /* Preparo ed eseguo la query: */
+            $sql = "INSERT INTO `utenti`( `nome`, `cognome`, `email`, `password`,`admin`)
+                    VALUES ('" . $nome . "','" . $cognome . "','" . $email . "','" . $hash . "',FALSE);";
+
+            $result = mysqli_query($conn, $sql);
+
+
+            /* Se $result è stata eseguita correttamente: altrimenti stampo messaggio di errore */
+            if ($result == 1) {
+
+                /* L'utente è stato registrato: setto la sessione e reindirizzo a community */
+                session_start();
+                $_SESSION['user_id'] = $email;
+                $_SESSION['user_name'] = $nome;
+                $_SESSION['logged'] = TRUE;
+                header("Location: /im-ict/community.php");
+
+            } else {
+                echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
+                header("refresh:5'; Location: /im-ict/register.php");
+            }
+        }
+    }
+    mysqli_close($conn);
+}
+
+?>
+<div class="content-body">
+    <div class="form">
+        <form action="register.php" method="POST">
+            <div class="imgcontainer">
+                <i class="fas fa-user"></i>
+                <!--                    <img src="resources/img/user.png" style="width: 100px" alt="Avatar" class="avatar">-->
+            </div>
+
+            <div class="form-input">
+                <p><b>SIGN-UP</b></p>
+                <input type="email" class="register-field-b" placeholder="Inserisci E-mail" name="email" required>
+                <input type="text" class="register-field-a" placeholder="Inserisci Nome" name="nome" required>
+                <input type="text" class="register-field-a" placeholder="Inserisci Cognome" name="cognome" required>
+                <input type="password" class="register-field-a" placeholder="Inserisci Password" name="password" required>
+                <input type="password" class="register-field-a" placeholder="Conferma Password" name="password_verify" required>
+
+                <button type="submit" class="submit-register-button" name="submit-button"><b>Registrati</b></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<?php
+include_once('partials/footer.php');
