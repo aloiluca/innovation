@@ -25,7 +25,7 @@ if (isset($_POST['submit-button'])) {
 
         else {
             echo '<div class="error-message">Le 2 password no cambaciano, riprova.</div>';
-            header("refresh:5'; Location: /register/register.php");
+            header("refresh:2'; Location: /register/register.php");
         }
 
         $sql = "SELECT * FROM utenti where email = '" . $email . "';";
@@ -50,10 +50,12 @@ if (isset($_POST['submit-button'])) {
                 $_SESSION['user_name'] = $nome;
                 $_SESSION['logged'] = TRUE;
                 header("Location: /innovation/community.php");
+                exit;
 
             } else {
                 echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
                 header("refresh:5'; Location: /innovation/register.php");
+                exit;
             }
         }
     }

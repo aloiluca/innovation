@@ -1,6 +1,39 @@
 <?php
 require 'config/database.php';
 require 'partials/header.php';
+
+/* Change Rule*/
+
+if ( isset( $_POST['change_rule'])) {
+
+    $id_utente = $_POST['id'];
+    $admin = $_POST['admin'];
+    $new_admin = ( $admin == 'TRUE' ) ? 'FALSE' : 'TRUE';
+    $sql = "UPDATE `utenti` SET `admin`= " .$new_admin." WHERE id = ". $id_utente . ";";
+    $result = mysqli_query( $conn, $sql);
+    header( "Refresh: 2; Location: /innovation/admin.php");
+    echo '<div class="messaggio-avviso">Valore Admin cambiato correttamente';
+}
+
+/* Delete utente */
+if ( isset( $_POST['delete_utente'])) {
+
+    $id_utente = $_POST['id'];
+
+    if ( $_SESSION['user_id'] != $id_utente ) {
+
+        $sql = 'DELETE FROM `utenti` WHERE id = '. $id_utente .';';
+        $result = mysqli_query( $conn, $sql);
+        header("Refresh:5; Location: /innovation/admin.php");
+        echo '<div class="messaggio-avviso">Utente ancellato correttamente';
+
+    }
+    else {
+        echo '<div class="error-message">Non puoi elminare la tua utenza </div>';
+    }
+}
+
+
 ?>
     <div class="content-body">
         <h2>Tabella degli Utenti</h2>
@@ -19,6 +52,7 @@ require 'partials/header.php';
 
 
 <?php
+/* Stampo tutti gli utenti registrati */
 
 $sql = 'SELECT * FROM utenti';
 $result = mysqli_query($conn, $sql);
@@ -42,10 +76,10 @@ if (mysqli_num_rows($result) > 0) {
                   <td>' . $cognome . '</td>
                   <td>' . $admin . '</td>
                   <td>
-                      <form action="/im-ict/core/admin/change-rule.php" method="POST">
+                      <form action="admin.php" method="POST">
                            <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
                            <input style="display:none" type="hidden" name="admin" value="' . $admin . '"></p>
-                           <button type="submit" name="edit-admin">
+                           <button type="submit" name="change_rule">
                                <span style="font-size: 2em; color: #191aff;">
                                     <i class="far fa-edit"></i>
                                </span>
@@ -54,9 +88,9 @@ if (mysqli_num_rows($result) > 0) {
                                    
                   </td>                           
                   <td>
-                      <form action="/im-ict/core/admin/delete-user.php" method="POST">
+                      <form action="admin.php" method="POST">
                             <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
-                            <button type="submit" name="delete-utente">
+                            <button type="submit" name="delete_utente">
                                 <span style="font-size: 2em; color: Tomato;">
                                     <i class="far fa-trash-alt"></i>
                                 </span>
@@ -71,7 +105,8 @@ if (mysqli_num_rows($result) > 0) {
         } else {
             echo '<div class="messaggio-avviso">Non ci sono utenti nel database</div>';
         }
-        ?>
 
-        </table>
+
+        ?>
+</table>
 

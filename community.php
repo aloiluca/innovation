@@ -5,6 +5,7 @@ if ($_SESSION['logged']) {
 } else {
     // Redirect them to the login page
     header("Location: /innovation/login.php");
+    exit;
 }
 
 require 'partials/footer.php';

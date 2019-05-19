@@ -12,7 +12,7 @@ if ( isset( $_POST['submit-button'])) {
         $password = trim($_POST['password']);
 
 
-        $sql = "SELECT password, email, nome, admin FROM utenti where email = '" . $email . "'";
+        $sql = "SELECT * FROM utenti where email = '" . $email . "'";
         $result = mysqli_query($conn, $sql);
 
         /* Se il risultato è uguale a 1, l'utente inserito corrisponde ad un solo utente nel database*/
@@ -25,9 +25,10 @@ if ( isset( $_POST['submit-button'])) {
                 if (sha1($password) == $row['password']) {
 
                     // LOGIN: avvio la sessione dell'utente
-                    session_start();
+//                    session_start();
                     /* Setto la variabile di sessione dell'utente */
-                    $_SESSION['user_id'] = $row['email'];
+                    $_SESSION['user_id'] = $row['id'];
+                    $_SESSION['email'] = $row['email'];
                     $_SESSION['logged'] = TRUE;
                     $_SESSION['user_name'] = $row['nome'];
 
