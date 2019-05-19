@@ -54,7 +54,7 @@ session_start();    // Start della sessione
         if ( isset( $_SESSION['admin'])) {
             echo'                    
                     <a href="/innovation/admin.php">Gestione Utenti</a>
-                    <a href="/innovation/admin-news.php">Gestione Articoli</a>
+                    <a href="/innovation/admin-articoli.php">Gestione Articoli</a>
                    
                 ';
         }
