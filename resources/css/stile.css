@@ -39,6 +39,9 @@ button {
 header {
     float: left;
     width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
@@ -46,8 +49,6 @@ header {
     overflow: visible;
     float: left;
     width: 100%;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
 }
 
 .navbar a {
@@ -180,8 +181,7 @@ header {
 .footer {
     background-color: rgb(24,26,26);
     width: 100%;
-    overflow:hidden;
-    height: 250px;
+    overflow: hidden;
 }
 
 .footerFloat a{
@@ -250,7 +250,7 @@ header {
 
 
 
-/* FILTER E FILTER TOOL */
+/* NEWS */
 
 .searchbar {
     margin-top: 8%;
@@ -262,31 +262,6 @@ header {
     font-size: 280%;
     text-align: center;
 }
-
-.cerca{
-    margin-left: 40%;
-    width: 20%;
-    text-align: center;
-    border-radius: 1em;
-}
-
-/*#submit-filter c'è sull'html ma manca sul css*/
-
-/* FINE FILTER E FILTER TOOL */
-
-
-
-/* SOLO FILTER */
-
-.argomenti {
-    text-align: center;
-}
-
-/* FINE SOLO FILTER */
-
-
-
-/*GET_ALL_ARTICLE*/
 
 .articolo {
     float: left;
@@ -308,19 +283,24 @@ header {
 .articolo:hover {
     background-color: #232f34;
     box-shadow: 5px 5px 5px #161e22;
-
 }
 
-/* FINE GET_ALL_ARTICLE */
+.argomenti {
+    text-align: center;
+}
+
+/*#submit-filter c'è sull'html ma manca sul css*/
+
+/* FINE NEWS */
 
 
 
-/* GET_ALL_TOOL */
+/* TOOL */
 
 .tool {
     float: left;
     width: 80%;
-    padding: 3% ;
+    padding: 3%;
     padding-top: 2%;
     padding-bottom: 1%;
     margin-top: 2%;
@@ -337,7 +317,7 @@ header {
 
 /*.tooltesto c'è sull'html ma manca sul css*/
 
-/* FINE GET_ALL_TOOL */
+/* FINE TOOL */
 
 
 
@@ -357,60 +337,7 @@ header {
 
 
 
-/* ADMIN */
-
-.funz {
-    width: 60%;
-    margin: auto;
-    height: auto;
-    background-color: #00665c;
-    color: #cccccc;
-    border-radius: 30px;
-}
-
-.title {
-    margin:2% 2%;
-}
-
-.title h4{
-    font-size: 150%;
-    font-family: 'Quicksand', sans-serif;
-    color:white;
-    word-spacing: 18px;
-}
-
-/* FINE ADMIN */
-
-
-
-/* ADMIN E LOGIN E REGISTER */
-
-.form-input label, legend{
-    font-size: 150%;
-}
-
-.form-input a {
-    color: #72DEFF;
-    text-decoration: none;
-}
-
-.form-input p {
-    color: #72DEFF;
-    text-align: center;
-}
-
-/* Add padding to containers */
-.form-input {
-    padding: 5%;
-    stroke: black;
-    margin-bottom: 10%;
-}
-
-/* FINE ADMIN E LOGIN E REGISTER */
-
-
-
-/* GET_A_ARTICLE */
+/* ARTICOLO */
 
 .testo {
     width: 60%;
@@ -439,7 +366,85 @@ header {
     color:white;
 }
 
-/* FINE GET_A_ARTICLE */
+/* ARTICOLO */
+
+
+
+/* ADMIN */
+
+.funz {
+    width: 60%;
+    margin: auto;
+    height: auto;
+    background-color: #00665c;
+    color: #cccccc;
+    border-radius: 30px;
+}
+
+.title {
+    margin:2% 2%;
+}
+
+.title h4{
+    font-size: 150%;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    word-spacing: 5px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
+.table tr:nth-child(even) {
+    background-color: rgb(24,26,26);
+    color: #cccccc;
+}
+
+.table th {
+    background-color: #00665c;
+    color: white;
+}
+
+/*.messaggio-avviso c'è sull'html ma manca sul css*/
+
+/* FINE ADMIN */
+
+
+
+/* ADMIN, LOGIN E REGISTER */
+
+.form-input label, legend{
+    font-size: 150%;
+}
+
+.form-input a {
+    color: #72DEFF;
+    text-decoration: none;
+}
+
+.form-input p {
+    color: #72DEFF;
+    text-align: center;
+}
+
+/* Add padding to containers */
+.form-input {
+    padding: 5%;
+    stroke: black;
+    margin-bottom: 10%;
+}
+
+/*.error-message c'è sull'html ma manca sul css*/
+
+/* FINE ADMIN, LOGIN E REGISTER */
 
 
 
@@ -545,39 +550,6 @@ button:hover {
 
 
 
-/* CORE/ADMIN */
-
-.intest{
-    color: white;
-}
-
-.table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table th, td {
-    text-align: center;
-    padding: 8px;
-}
-
-.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
-.table tr:nth-child(even) {
-    background-color: rgb(24,26,26);
-    color: #cccccc;
-}
-
-.table th {
-    background-color: #00665c;
-    color: white;
-}
-
-/*.messaggio-avviso c'è sull'html ma manca sul css*/
-
-/* FINE CORE/ADMIN */
-
-
-
 /* CHI SIAMO */
 
 .divblock {
@@ -647,14 +619,6 @@ button:hover {
 
 
 
-/* CORE/LOGIN E CORE/REGISTER */
-
-/*.error-message c'è sull'html ma manca sul css*/
-
-/* FINE CORE/LOGIN E CORE/REGISTER */
-
-
-
 /* MEDIA QUERY */
 
 /* Change styles for span and cancel button on extra small screens */
@@ -666,13 +630,11 @@ button:hover {
     .cancelbtn {
         width: 100%;
     }
-
-
 }
 
 /* Con schermo più piccolo di 1000px nascondo
- * gli elementi della navbar e mostro l'hamburger*/
-@media screen and (max-width: 1000px) {
+   gli elementi della navbar e mostro l'hamburger*/
+@media screen and (max-width: 1260px) {
     .navbar a {
         display: none;
         float: none;
@@ -686,9 +648,63 @@ button:hover {
         background-color: #232F34;
     }*/
 
-    .footer a {
-        float: left;
-        display: none;
+    .footerFloat a {
+        color: white;
+    }
+
+    .footerFloat {
+        width: 70%;
+        margin: auto;
+        padding: 60px 80px;
+        border-bottom: 1px solid grey;
+        border-right: none;
+        float: none;
+    }
+
+    .footerFloat p {
+        color: whitesmoke;
+        display: inline-block;
+        position: relative;
+        bottom: 210px;
+        left: 395px;
+    }
+
+    .footerFloat ul {
+        display: block;
+        position: relative;
+    }
+
+    .footerFloat ul li {
+        font-size: 150%;
+        list-style-type: disc;
+        color: whitesmoke;
+    }
+
+    .instagram {
+        position: relative;
+        bottom: 200px;
+        left: 380px;
+        width: 190px;
+        display: block;
+
+    }
+
+    .logo {
+        position: relative;
+        bottom: 50px;
+        left: 70px;
+        width: 160px;
+        display: block;
+
+    }
+
+    .underFooter {
+        font-size: 100%;
+        padding-left: 25px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        color: whitesmoke;
+        background-color: rgb(24, 26, 26);
     }
 }
 
@@ -698,14 +714,14 @@ button:hover {
 
 /* NON TROVATE NELLE PAGINE */
 
-/*.filtri{
+/* .filtri{
     font-size: 140%;
     color:white;
     text-align: center;
 
-}*/
+}
 
-/*.form-label {
+.form-label {
     float: left;
     width: 20%;
 
@@ -713,4 +729,15 @@ button:hover {
     margin-left: 1%;
     margin-bottom: 4%;
     border-radius: 3px;
-}*/
+}
+
+.cerca{
+    margin-left: 40%;
+    width: 20%;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.intest{
+    color: white;
+} */
