@@ -85,5 +85,7 @@ if (isset($_POST['submit-button'])) {
     </div>
 </div>
 
+
 <?php
-include_once('partials/footer.php');
+require 'partials/footer.php';
+?>

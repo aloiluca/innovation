@@ -49,3 +49,6 @@ if( isset( $_POST['crea_articolo']) ){
         </button>
     </form>
 </div>
+<?php
+require 'partials/footer.php';
+?>
