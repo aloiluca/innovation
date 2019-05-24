@@ -4,6 +4,13 @@ require 'partials/header.php';
 ?>
 
 <div class="content-body">
+
+<div class="intro">
+    <p>Questo sito è stato pensato per guidarvi nel mondo delle nuove tecnologie e dell'innovazione, e per far riflettere
+        gettando uno sguardo sul mondo del presente e sul mondo del futuro.</p>
+    <h4>Già ma... cosa significa ICT?</h4>
+</div>
+
 <div class="index-letter">
 
     <div id="letter-img-left">

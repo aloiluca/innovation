@@ -36,7 +36,9 @@ if ( isset( $_POST['delete_utente'])) {
 
 ?>
     <div class="content-body">
-        <h2>Tabella degli Utenti</h2>
+        <div class="title">
+            <h4>Tabella degli Utenti</h4>
+        </div>
 
         <!-- Apertura table -->
         <table class="table">
@@ -108,5 +110,8 @@ if (mysqli_num_rows($result) > 0) {
 
 
         ?>
-</table>
-
+        </table>
+    </div>
+<?php
+require 'partials/footer.php';
+?>

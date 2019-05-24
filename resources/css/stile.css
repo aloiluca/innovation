@@ -1,11 +1,12 @@
-html {
-    /* Float e left saranno sempre settati*/
+
+/* GENERAL */
+
+html {  /* Float e left saranno sempre settati */
     float: left;
     width: 100%;
 }
 
-/* Definizione del body*/
-body {
+body {  /* Definizione del body */
     float: left;
     width: 100%;
     height: auto;
@@ -14,17 +15,52 @@ body {
     background-color: #242626;
 }
 
-header {
-    float: left;
-    width: 100%;
-}
-
 button {
     background-color: Transparent;
     border: none;
     cursor:pointer;
     overflow: hidden;
+}
 
+.content-body {  /* da aggiungere come container di ogni pagina */
+    float: left;
+    width: 98%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+/* FINE GENERAL */
+
+
+
+/* HEADER */
+
+header {
+    float: left;
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    background-color: #00665c;
+    overflow: visible;
+    float: left;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    color: white;
+    text-align: center;
+    padding: 1.6% 1.5%;
+    text-decoration: none;
+    font-size: 1.3em; /* @todo ??? non funge */
+    font-weight: bold;
 }
 
 .navbar #logo {
@@ -35,33 +71,13 @@ button {
 .navbar #logo a:hover {
     background-color: #00665c;
 }
+
 .navbar #logo a img {
-    width: 55px;
+    width: 71px;
     height: auto;
 }
 
-.navbar {
-    background-color: #00665c ;
-    overflow: visible;
-    float: left;
-    width: 100%;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1.5% 1.5%;
-    text-decoration: none;
-    font-size: 1.3em; /* @todo ??? non funge */
-    font-weight: bold;
-}
-
-/* Cambio del link color all'evento :hover */
-.navbar a:hover {
+.navbar a:hover {  /* Cambio del link color all'evento :hover */
     background-color: #232F34 ; /*rgb(221,164, 21)*/
     color: white;
 }
@@ -71,6 +87,12 @@ button {
     float: right;
 }
 
+/* FINE HEADER */
+
+
+
+/* INDEX */
+
 .index-letter {
     float: left;
     width: 80%;
@@ -79,7 +101,6 @@ button {
     text-align: center;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-
 }
 
 .index-letter #letter-img-left img {
@@ -124,8 +145,6 @@ button {
     color: white;
     line-height: 118%;
     word-spacing: 1.9px;
-
-
 }
 
 #letter-img-left img.resized {
@@ -140,16 +159,33 @@ button {
     vertical-align: center;
 }
 
+.intro {
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+    width: 90%;
+    border-radius: 2em;
+    color: white;
+    background-color: #00665c;
+    font-size: 1.3em;
+}
+
+/* FINE INDEX */
+
+
+
+/* FOOTER */
+
 .footer {
     background-color: rgb(24,26,26);
     width: 100%;
-    overflow:hidden;
-    height: 380px;
+    overflow: hidden;
 }
 
 .footerFloat a{
-    color: rgb(221, 164, 21);
-    text-decoration: none;
+    color: white;
 }
 
 .footerFloat {
@@ -165,9 +201,16 @@ button {
     color: whitesmoke;
     display: inline-block;
     position: relative;
-    bottom: 320px;
-    left: 396px;
+    bottom: 210px;
+    left: 395px;
 
+}
+
+.footerFloat ul{
+    display: block;
+    position: relative;
+    bottom: 15px;
+    left: 20px;
 }
 
 .footerFloat ul li{
@@ -178,18 +221,18 @@ button {
 
 .instagram{
     position: relative;
-    bottom: 310px;
-    left: 300px;
-    width: 350px;
+    bottom: 200px;
+    left: 380px;
+    width: 190px;
     display: block;
 
 }
 
 .logo {
     position: relative;
-    bottom: 45px;
-
-    width: 290px;
+    bottom: 50px;
+    left: 70px;
+    width: 160px;
     display: block;
 
 }
@@ -203,63 +246,21 @@ button {
     background-color: rgb(24,26,26);
 }
 
+/* FINE FOOTER */
 
 
 
-
-
-/* login e register */
-.form {
-    float: left;
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 2%;
-    height: auto;
-    background-color: #00665c;
-    color: #cccccc;
-    border-radius: 30px;
-}
-
-
-
-#argomenti {
-    color: white;
-    margin:20%;
-}
-
-.listaarg {
-    margin-top: 40%;
-}
-
-
-.content-body {
-    float: left;
-    width: 98%;
-    margin-left: 0.5%;
-    margin-top: 1%;
-    margin-bottom: 4%;
-}
+/* NEWS */
 
 .searchbar {
     margin-top: 8%;
     color:white;
-
 }
+
 .searchbar h1 {
     color:white;
     font-size: 280%;
     text-align: center;
-}
-
-.argomenti {
-    text-align: center;
-}
-
-.cerca {
-    margin-left: 40%;
-    width: 20%;
-    text-align: center;
-    border-radius: 60%/20%;
 }
 
 .articolo {
@@ -282,15 +283,24 @@ button {
 .articolo:hover {
     background-color: #232f34;
     box-shadow: 5px 5px 5px #161e22;
-
 }
 
+.argomenti {
+    text-align: center;
+}
 
+/*#submit-filter c'è sull'html ma manca sul css*/
+
+/* FINE NEWS */
+
+
+
+/* TOOL */
 
 .tool {
     float: left;
     width: 80%;
-    padding: 3% ;
+    padding: 3%;
     padding-top: 2%;
     padding-bottom: 1%;
     margin-top: 2%;
@@ -303,15 +313,11 @@ button {
 .tool:hover {
     background-color: #232f34;
     box-shadow: 5px 5px 5px #161e22;
-
 }
 
+/*.tooltesto c'è sull'html ma manca sul css*/
 
-
-
-
-
-#p {background-color: rgba(255, 255, 255, 0.5)}
+/* FINE TOOL */
 
 
 
@@ -327,6 +333,123 @@ button {
     box-sizing: border-box;
 }*/
 
+/* Center the avatar image inside this container */
+
+
+
+/* ARTICOLO */
+
+.testo {
+    width: 60%;
+    margin-left: 20%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 170%;
+    color:white;
+    line-height: 220%;
+    word-spacing: 18px;
+}
+
+.titolotesto {
+    width: 60%;
+    margin-left: 20%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 200%;
+    color:white;
+}
+
+.divtesto h5{
+    width: 60%;
+    margin-left: 74%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    text-align: right;
+    color:white;
+}
+
+/* ARTICOLO */
+
+
+
+/* ADMIN */
+
+.funz {
+    width: 60%;
+    margin: auto;
+    height: auto;
+    background-color: #00665c;
+    color: #cccccc;
+    border-radius: 30px;
+}
+
+.title {
+    margin:2% 2%;
+}
+
+.title h4{
+    font-size: 150%;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    word-spacing: 5px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
+.table tr:nth-child(even) {
+    background-color: rgb(24,26,26);
+    color: #cccccc;
+}
+
+.table th {
+    background-color: #00665c;
+    color: white;
+}
+
+/*.messaggio-avviso c'è sull'html ma manca sul css*/
+
+/* FINE ADMIN */
+
+
+
+/* ADMIN, LOGIN E REGISTER */
+
+.form-input label, legend{
+    font-size: 150%;
+}
+
+.form-input a {
+    color: #72DEFF;
+    text-decoration: none;
+}
+
+.form-input p {
+    color: #72DEFF;
+    text-align: center;
+}
+
+/* Add padding to containers */
+.form-input {
+    padding: 5%;
+    stroke: black;
+    margin-bottom: 10%;
+}
+
+/*.error-message c'è sull'html ma manca sul css*/
+
+/* FINE ADMIN, LOGIN E REGISTER */
+
+
+
+/* LOGIN E REGISTER */
+
 /* Set a style for all buttons */
 .register-button {
     float: left;
@@ -337,6 +460,17 @@ button {
     margin-bottom: 4%;
     border: none;
     cursor: pointer;
+}
+
+.form {
+    float: left;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: auto;
+    background-color: #00665c;
+    color: #cccccc;
+    border-radius: 30px;
 }
 
 .submit-register-button {
@@ -396,22 +530,6 @@ button:hover {
     background-color: #72DEFF;
 }
 
-.form-label {
-    float: left;
-    width: 20%;
-
-    margin-top: 2%;
-    margin-left: 1%;
-    margin-bottom: 4%;
-    border-radius: 3px;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
@@ -421,15 +539,6 @@ button:hover {
     font-size: 7rem;
 }
 
-
-
-/* Add padding to containers */
-.form-input {
-    padding: 5%;
-    stroke: black;
-    margin-bottom: 10%;
-}
-
 .form-container-button {
     float: left;
     width: 100%;
@@ -437,116 +546,11 @@ button:hover {
     margin-bottom: 3%;
 }
 
-
-.form-input a {
-    color: #72DEFF;
-    text-decoration: none;
-}
-
-.form-input p {
-    color: #72DEFF;
-    text-align: center;
-}
+/* FINE LOGIN E REGISTER */
 
 
-.testo {
-    width: 60%;
-    margin-left: 20%;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 170%;
-    color:white;
-    line-height: 220%;
-    word-spacing: 18px ;
-
-}
-
-
-.titolotesto {
-    width: 60%;
-    margin-left: 20%;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 200%;
-    color:white;
-}
-.divtesto h5{
-    width: 60%;
-    margin-left: 74%;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 100%;
-    text-align: right;
-    color:white;
-}
-
-
-.filtri{
-    font-size: 140%;
-    color:white;
-    text-align: center;
-
-}
-
-.table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table th, td {
-    text-align: center;
-    padding: 8px;
-}
-
-.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
-.table tr:nth-child(even) {
-    background-color: rgb(24,26,26);
-    color: #cccccc;
-}
-
-.table th {
-    background-color: #00665c;
-    color: white;
-}
-
-
-
-
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
-    }
-
-
-}
-
-/* Con schermo più piccolo di 1000px nascondo
- * gli elementi della navbar e mostro l'hamburger*/
-@media screen and (max-width: 1000px) {
-    .navbar a {
-        display: none;
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    /*#myHambuger {
-        display: block;
-        text-align: center;
-        background-color: #232F34;
-    }*/
-
-    .footer a {
-        float: left;
-        display: none;
-    }
-}
 
 /* CHI SIAMO */
-
 
 .divblock {
     width: 100%;
@@ -609,5 +613,131 @@ button:hover {
     padding-right: 20%;
 }
 
+/*#googlemap c'è sull'html ma manca sul css*/
 
-/* Fine CHISIAMO */
+/* FINE CHISIAMO */
+
+
+
+/* MEDIA QUERY */
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* Con schermo più piccolo di 1000px nascondo
+   gli elementi della navbar e mostro l'hamburger*/
+@media screen and (max-width: 1260px) {
+    .navbar a {
+        display: none;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /*#myHambuger {
+        display: block;
+        text-align: center;
+        background-color: #232F34;
+    }*/
+
+    .footerFloat a {
+        color: white;
+    }
+
+    .footerFloat {
+        width: 70%;
+        margin: auto;
+        padding: 60px 80px;
+        border-bottom: 1px solid grey;
+        border-right: none;
+        float: none;
+    }
+
+    .footerFloat p {
+        color: whitesmoke;
+        display: inline-block;
+        position: relative;
+        bottom: 210px;
+        left: 395px;
+    }
+
+    .footerFloat ul {
+        display: block;
+        position: relative;
+    }
+
+    .footerFloat ul li {
+        font-size: 150%;
+        list-style-type: disc;
+        color: whitesmoke;
+    }
+
+    .instagram {
+        position: relative;
+        bottom: 200px;
+        left: 380px;
+        width: 190px;
+        display: block;
+
+    }
+
+    .logo {
+        position: relative;
+        bottom: 50px;
+        left: 70px;
+        width: 160px;
+        display: block;
+
+    }
+
+    .underFooter {
+        font-size: 100%;
+        padding-left: 25px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        color: whitesmoke;
+        background-color: rgb(24, 26, 26);
+    }
+}
+
+/* FINE MEDIA QUERY */
+
+
+
+/* NON TROVATE NELLE PAGINE */
+
+/* .filtri{
+    font-size: 140%;
+    color:white;
+    text-align: center;
+
+}
+
+.form-label {
+    float: left;
+    width: 20%;
+
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 4%;
+    border-radius: 3px;
+}
+
+.cerca{
+    margin-left: 40%;
+    width: 20%;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.intest{
+    color: white;
+} */
