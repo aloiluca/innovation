@@ -35,6 +35,12 @@ button {
     margin-bottom: 4%;
 }
 
+h1 {
+    color: white;
+    font-size: 280%;
+    text-align: center;
+}
+
 /* FINE GENERAL */
 
 
@@ -87,7 +93,7 @@ header {
     color: white;
 }
 
-#myHambuger {
+#myHamburger {
     display: none;
     float: right;
 }
@@ -260,12 +266,6 @@ header {
     color:white;
 }
 
-.searchbar h1 {
-    color: white;
-    font-size: 280%;
-    text-align: center;
-}
-
 .articolo {
     float: left;
     width: 18%;
@@ -399,10 +399,14 @@ header {
     padding: 8px;
 }
 
-.table tr:nth-child(odd){background-color: rgb(221, 164, 21)}
+.table tr:nth-child(odd){background-color: rgb #242626}
 .table tr:nth-child(even) {
     background-color: rgb(24,26,26);
     color: #cccccc;
+}
+
+.table td {
+    border-bottom: 1px solid grey;
 }
 
 .table th {
@@ -417,6 +421,8 @@ header {
 
 
 /* ADMIN-ARTICOLI */
+
+
 
 /* FINE ADMIN-ARTICOLI */
 
@@ -575,11 +581,6 @@ button:hover {
     width: 100%;
 }
 
-.divblock h1 {
-    color: #cccccc;
-    text-align: center;
-}
-
 #contattacileft label {
     float: left;
     color: #cccccc;
@@ -628,7 +629,7 @@ button:hover {
         text-align: center;
     }
 
-    /*#myHambuger {
+    /*#myHamburger {
         display: block;
         text-align: center;
         background-color: #232F34;

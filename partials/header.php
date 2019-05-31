@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL); //Imposta quali errori PHP sono segnalati:
-ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
+//error_reporting(E_ALL); //Imposta quali errori PHP sono segnalati
+//ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
 session_start();    // Start della sessione
 ?>
 
@@ -11,7 +11,7 @@ session_start();    // Start della sessione
     <meta charset="UTF-8" />
     <meta name="keywords" content="ict, unito, studenti, html, css" />
     <meta name="description" content="Sito web per studenti di Andrea Carlucci e Rosario Orlando" />
-    <meta name="author" content="Andrea Carlucci, Matteo Ninotti, Flavio Pirazzi, Mahdi, Rachele Veronese, Gabriele Gennari, Edoardo Sina, Luca Aloi" />
+    <meta name="author" content="Andrea Carlucci, Matteo Ninotti, Flavio Pirazzi, Mahdi, Rachele Veronese, Gabriele Gennari, Luca Aloi" />
     <!--favicon della pagina che appare accanto al titolo nel browser-->
 
     <!-- Link al foglio di stile .css-->
@@ -41,7 +41,7 @@ session_start();    // Start della sessione
 
 
         <!--Hamburger da gestire tramite CSS o codice javascript volendo?-->
-        <!--  <a id="myHambuger" href=""><i class="fa fa-bars"</i></a>-->
+        <!--  <a id="myHamburger" href=""><i class="fa fa-bars"</i></a>-->
 
         <!-- Elementi della nav bar-->
         <a href="/innovation/index.php">HOME</a>
@@ -55,7 +55,8 @@ session_start();    // Start della sessione
             echo'                    
                     <a href="/innovation/admin.php">Gestione Utenti</a>
                     <a href="/innovation/admin-articoli.php">Gestione Articoli</a>
-                   
+                    <!--<a href="/innovation/admin-tools.php">Gestione Tools</a>-->
+                    
                 ';
         }
 

@@ -30,17 +30,16 @@ if ( isset( $_POST['submit-button'])) {
                     /*Setto la variabile di sessione dell'utente */
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['email'] = $row['email'];
-
                     $_SESSION['user_name'] = $row['nome'];
 
                     if ($row['admin'] == TRUE) {
                         $_SESSION['admin'] = TRUE;
                         header("Location: /innovation/admin.php");
-                        exit;
+                        //exit;
                     } else {
                         /* Reindirizzo a community.php */
                         header("Location: /innovation/index.php");
-                        exit;
+                        //exit;
                     }
 
                 } else {

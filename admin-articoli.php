@@ -43,8 +43,7 @@ if( isset( $_POST['crea_articolo']) ){
 
 
 ?>
-
-<div>
+<div class="content-body">
     <form action="admin-articoli.php" method="POST">
         Titolo: <input type="text" name="titolo"><br>
         Sottotitolo: <input type="text" name="sottotitolo"><br>

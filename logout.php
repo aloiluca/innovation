@@ -6,5 +6,4 @@ session_destroy();
 header("Location: /innovation/index.php");
 exit;
 
-require 'partials/footer.php';
 ?>
