@@ -4,25 +4,9 @@ require 'config/database.php';
 require 'partials/header.php';
 ?>
 
-    echo '<div class="content-body">';
-        <div class="searchbar">
-            <form action="/im-ict/news.php" method="POST">
-                <h1>TOOLS</h1>
-                <div class="cerca">
-                <input type="text" placeholder="cerca" class="cerca" value="Cerca per titolo o per autore">
-                </div>
-                <!-- Categorie -->
-                <div class="argomenti">
-                <input type="checkbox" name="categoria_scelta" value="ultime novità"> Ultime novità
-                <input type="checkbox" name="categoria_scelta" value="Digital_Marketing"> programmi
-                <input type="checkbox" name="categoria_scelta" value="New Technogy"> tutorial
-                <input type="checkbox" name="categoria_scelta" value="piattaforme utili"> piattaforme utili
+   <div class="content-body">
+       <h1 style="text-align: center">TOOLS</h1>
 
-        <!-- Submit -->
-                <button type="submit" name="submit-filter" value="Submit">Submit</button>
-                </div>
-            </form>
-        </div>
 
 <?php
 
