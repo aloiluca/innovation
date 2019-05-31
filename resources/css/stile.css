@@ -13,6 +13,11 @@ body {  /* Definizione del body */
     font-family: Helvetica, Arial, sans-serif;
     margin: auto;
     background-color: #242626;
+    color:white;
+}
+
+.titolo {
+    color: white;
 }
 
 button {
