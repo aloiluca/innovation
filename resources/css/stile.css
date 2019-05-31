@@ -592,9 +592,10 @@ button:hover {
 }
 
 #contattacileft label {
+    float: left;
     color: #cccccc;
-    text-align: center;
     font-size: large;
+    width: 100%;
 }
 
 #contattacileft {
