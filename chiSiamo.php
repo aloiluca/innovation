@@ -82,7 +82,7 @@
     </div>
 
     <div id="contattaciright">
-        <a href="https://www.instagram.com/?hl=it"><img src="resources/img/instagram.png" alt="instagram" height="70" width="80" </a>
+        <a href="https://www.instagram.com/?hl=it"><img src="resources/img/instagram.jpg" alt="instagram" height="80" width="100" </a>
     </div>
     </div>
 </div>
