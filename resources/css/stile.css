@@ -196,26 +196,26 @@ header {
 .footerFloat {
     box-sizing: border-box;
     width: 50%;
-    margin: 60px 0px;
-    padding: 40px 60px;
+    margin: 4% 0 1%;
+    max-height: 250px;
     float: left;
     border-right: 1px solid grey;
 }
 
 .footerFloat p {
+    font-size: 105%;
     color: whitesmoke;
     display: inline-block;
     position: relative;
-    bottom: 210px;
-    left: 395px;
+    bottom: 160px;
+    left: 415px;
 
 }
 
 .footerFloat ul{
     display: block;
     position: relative;
-    bottom: 15px;
-    left: 20px;
+    margin: 4.1%;
 }
 
 .footerFloat ul li{
@@ -226,20 +226,18 @@ header {
 
 .instagram{
     position: relative;
-    bottom: 200px;
-    left: 380px;
-    width: 190px;
+    bottom: 150px;
+    left: 400px;
+    width: 28%;
     display: block;
 
 }
 
 .logo {
     position: relative;
-    bottom: 50px;
-    left: 70px;
-    width: 160px;
+    left: 110px;
+    width: 25%;
     display: block;
-
 }
 
 .underFooter {
@@ -420,32 +418,9 @@ header {
 
 
 
-/* ADMIN, LOGIN E REGISTER */
+/* ADMIN-ARTICOLI */
 
-.form-input label, legend{
-    font-size: 150%;
-}
-
-.form-input a {
-    color: #72DEFF;
-    text-decoration: none;
-}
-
-.form-input p {
-    color: #72DEFF;
-    text-align: center;
-}
-
-/* Add padding to containers */
-.form-input {
-    padding: 5%;
-    stroke: black;
-    margin-bottom: 10%;
-}
-
-/*.error-message c'è sull'html ma manca sul css*/
-
-/* FINE ADMIN, LOGIN E REGISTER */
+/* FINE ADMIN-ARTICOLI */
 
 
 
@@ -546,6 +521,29 @@ button:hover {
     margin-top: 8%;
     margin-bottom: 3%;
 }
+
+.form-input label, legend{
+    font-size: 150%;
+}
+
+.form-input a {
+    color: #72DEFF;
+    text-decoration: none;
+}
+
+.form-input p {
+    color: #72DEFF;
+    text-align: center;
+}
+
+/* Add padding to containers */
+.form-input {
+    padding: 5%;
+    stroke: black;
+    margin-bottom: 10%;
+}
+
+/*.error-message c'è sull'html ma manca sul css*/
 
 /* FINE LOGIN E REGISTER */
 
@@ -656,7 +654,7 @@ button:hover {
     .footerFloat {
         width: 70%;
         margin: auto;
-        padding: 60px 80px;
+        padding: 80px 80px;
         border-bottom: 1px solid grey;
         border-right: none;
         float: none;
@@ -673,6 +671,7 @@ button:hover {
     .footerFloat ul {
         display: block;
         position: relative;
+        bottom: 50px;
     }
 
     .footerFloat ul li {
@@ -719,7 +718,6 @@ button:hover {
     font-size: 140%;
     color:white;
     text-align: center;
-
 }
 
 .form-label {
