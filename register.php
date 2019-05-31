@@ -49,7 +49,7 @@ if (isset($_POST['submit-button'])) {
                 $_SESSION['user_id'] = $email;
                 $_SESSION['user_name'] = $nome;
                 $_SESSION['logged'] = TRUE;
-                header("Location: /innovation/community.php");
+                header("Location: /innovation/login.php");
                 exit;
 
             } else {
