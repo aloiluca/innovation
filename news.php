@@ -29,7 +29,7 @@ require 'partials/header.php';
                 </select>
 
                 <!-- Submit -->
-                <input type="submit" class="submit-filter" name="submit-filter"</input>
+                <input type="submit" name="submit-filter">invia</input>
             </fieldset>
         </form>
     </div>
@@ -43,7 +43,7 @@ if ( isset($_POST['submit-filter']) ) {
 
     if (!isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
 
-        echo '<div class="allert">Non hai selezionato nessun filtro</div>';
+        echo '<div class="alert">Non hai selezionato nessun filtro</div>';
     } else {
         if (isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
 

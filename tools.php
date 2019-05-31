@@ -19,7 +19,7 @@ require 'partials/header.php';
                 <input type="checkbox" name="categoria_scelta" value="piattaforme utili"> piattaforme utili
 
         <!-- Submit -->
-                <button type="submit" id="submit-filter" name="submit-filter" value="Submit">Submit</button>
+                <button type="submit" name="submit-filter" value="Submit">Submit</button>
                 </div>
             </form>
         </div>
