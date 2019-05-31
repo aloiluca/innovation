@@ -29,7 +29,7 @@ require 'partials/header.php';
                 </select>
 
                 <!-- Submit -->
-                <input type="submit" class="submit-filter" name="submit-filter"</input>
+                <input type="submit" name="submit-filter"</input>
             </fieldset>
         </form>
     </div>
@@ -43,7 +43,7 @@ if ( isset($_POST['submit-filter']) ) {
 
     if (!isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
 
-        echo '<div class="allert">Non hai selezionato nessun filtro</div>';
+        echo '<div>Non hai selezionato nessun filtro</div>';
     } else {
         if (isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
 
@@ -86,7 +86,7 @@ if ( isset($_POST['submit-filter']) ) {
                                  <h4>' . $sottotitolo . '</h4>
                                  <h6>Data: ' . $data . '</h6>
                                  <p>Categoria: ' . $categoria . '</p>
-                                 <p>Categoria: ' . $autore . '</p>
+                                 <p>Autore: ' . $autore . '</p>
                             </form>
                        </div>
                                 
@@ -121,12 +121,12 @@ if ( isset($_POST['submit-filter']) ) {
                     echo '
                        <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
                            <form action="/innovation/articolo.php" method="POST">
-                                <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
+                                <h1><button type="submit" id="submit" class="titolo" name="submit">' . $titolo . '</button></h1>
                                  <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
                                  <h4>' . $sottotitolo . '</h4>
                                  <h6>Data: ' . $data . '</h6>
                                  <p>Categoria: ' . $categoria . '</p>
-                                 <p>Categoria: ' . $autore . '</p>
+                                 <p>Autore: ' . $autore . '</p>
                             </form>
                        </div>
                                 
@@ -178,7 +178,7 @@ if ( isset($_POST['submit-filter']) ) {
                                  <h4>' . $sottotitolo . '</h4>
                                  <h6>Data: ' . $data . '</h6>
                                  <p>Categoria: ' . $categoria . '</p>
-                                 <p>Categoria: ' . $autore . '</p>
+                                 <p>Autore: ' . $autore . '</p>
                             </form>
                        </div>
                                 
@@ -255,7 +255,7 @@ else {
                                         <h4>' . $sottotitolo . '</h4>
                                         <h6>Data: ' . $data . '</h6>
                                         <p>Categoria: ' . $categoria . '</p>
-                                        <p>Categoria: ' . $autore . '</p>
+                                        <p>Autore: ' . $autore . '</p>
                                     </form>
                                 </div> 
                         ';

@@ -6,6 +6,7 @@ CREATE TABLE `innovation`.`articoli` (
     `corpo` VARCHAR(500) NOT NULL ,
     `categoria` VARCHAR(50) NOT NULL ,
     `data` DATE NOT NULL ,
+    `gdrive` text NOT NULL
         PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`)

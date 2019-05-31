@@ -24,12 +24,13 @@ if ( isset( $_POST['submit-button'])) {
                 /* Se lo sha1() della password inserita è uguale alla password nel database*/
                 if (sha1($password) == $row['password']) {
 
+                    //session_start();
                     // LOGIN: avvio la sessione dell'utente
-//                    session_start();
-                    /* Setto la variabile di sessione dell'utente */
+                    $_SESSION['logged'] = TRUE;
+                    /*Setto la variabile di sessione dell'utente */
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['email'] = $row['email'];
-                    $_SESSION['logged'] = TRUE;
+
                     $_SESSION['user_name'] = $row['nome'];
 
                     if ($row['admin'] == TRUE) {
@@ -38,7 +39,7 @@ if ( isset( $_POST['submit-button'])) {
                         exit;
                     } else {
                         /* Reindirizzo a community.php */
-                        header("Location: /innovation/community.php");
+                        header("Location: /innovation/index.php");
                         exit;
                     }
 
@@ -47,7 +48,7 @@ if ( isset( $_POST['submit-button'])) {
                 }
             }
         } else {
-            echo '<div class=\'error-message\'>Utente non registrato</div>';
+            echo "<div class='error-message' >Utente non registrato</div>";
         }
 
         /* Chiudo in ogni caso la connessione con Mysql */

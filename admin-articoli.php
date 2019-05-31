@@ -1,13 +1,16 @@
 <?php
 require 'partials/header.php';
+require 'partials/functions.php';
 require 'config/database.php';
+
 
 if( isset( $_POST['crea_articolo']) ){
 
-    $titolo = $_POST['titolo'];
-    $sottotitolo = $_POST['sottotitolo'];
-    $categoria = $_POST['categoria'];
-    $corpo = $_POST['corpo'];
+    $title = $_POST['titolo'];
+    $subtitle = $_POST['sottotitolo'];
+    $categoy = $_POST['categoria'];
+    $body = $_POST['corpo'];
+
 
     /* Setto il time local e richiedo l'ora corrente */
     $timelocal = date_default_timezone_set('Europe/Rome');
@@ -15,6 +18,11 @@ if( isset( $_POST['crea_articolo']) ){
 
     /* Recupero il nome dell'utente loggato */
     $autore = $_SESSION['user_name'];
+
+    $titolo=replace_special_character($title);
+    $sottotitolo=replace_special_character($subtitle);
+    $categoria=replace_special_character($category);
+    $corpo=replace_special_character($body);
 
     $sql = "INSERT INTO `articoli`( `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`) 
                 VALUES ( '". $titolo ."','" . $sottotitolo ."','" . $autore ."','" . $corpo . "','". $categoria . "','" . $date . "' );";
@@ -29,7 +37,6 @@ if( isset( $_POST['crea_articolo']) ){
     }
     else {
         echo 'articolo non inserito';
-
     }
 }
 
