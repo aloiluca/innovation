@@ -44,11 +44,7 @@ if (isset($_POST['submit-button'])) {
             /* Se $result è stata eseguita correttamente: altrimenti stampo messaggio di errore */
             if ($result == 1) {
 
-                /* L'utente è stato registrato: setto la sessione e reindirizzo a community */
-                session_start();
-                $_SESSION['user_id'] = $email;
-                $_SESSION['user_name'] = $nome;
-                $_SESSION['logged'] = TRUE;
+                /* L'utente è stato registrato: reindirizzo a login */
                 header("Location: /innovation/login.php");
                 exit;
 
