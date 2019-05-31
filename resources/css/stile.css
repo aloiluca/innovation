@@ -256,7 +256,7 @@ header {
 }
 
 .searchbar h1 {
-    color: white;
+    color:white;
     font-size: 280%;
     text-align: center;
 }
@@ -282,6 +282,8 @@ header {
     background-color: #232f34;
     box-shadow: 5px 5px 5px #161e22;
 }
+
+/*#submit-filter c'è sull'html ma manca sul css*/
 
 /* FINE NEWS */
 

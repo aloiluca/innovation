@@ -37,7 +37,7 @@
             </div>
             <div class="central-profile">
                 <img src="resources/img/lego.png" height="100" width="100">
-                <label>Luca Aloi</label>
+                <label>luca Aloi</label>
             </div>
          </div>
         <div class="right-profile">
