@@ -29,7 +29,6 @@ if( isset( $_POST['crea_articolo']) ){
     }
     else {
         echo 'articolo non inserito';
-
     }
 }
 

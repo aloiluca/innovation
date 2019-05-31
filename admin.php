@@ -25,7 +25,7 @@ if ( isset( $_POST['delete_utente'])) {
         $sql = 'DELETE FROM `utenti` WHERE id = '. $id_utente .';';
         $result = mysqli_query( $conn, $sql);
         header("Refresh:5; Location: /innovation/admin.php");
-        echo '<div class="messaggio-avviso">Utente ancellato correttamente';
+        echo '<div class="messaggio-avviso">Utente cancellato correttamente';
 
     }
     else {
