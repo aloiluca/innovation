@@ -549,44 +549,32 @@ button:hover {
 /* CHI SIAMO */
 
 .divblock {
-    width: 100%;
-}
-
-.left-profile  {
-    float: left;
-    width: 33.3%;
-    text-align: center;
-}
-
-.central-profile  {
-    float: right;
-    width: 33.3%;
-    text-align: center;
-    padding-right: 10%;
-}
-
-.right-profile  {
-    float: right;
-    width: 33.3%;
-    text-align: center;
-}
-
-.mezzo-profile {
-    float: left;
-    width: 66.5%;
-}
-
-.riga-profile {
     float: left;
     width: 100%;
-    padding-top: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-.left-profile, .central-profile, .right-profile label {
+.profile  {
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+.profile label {
     color: #ffffff;
+    width: 100%;
+    font-size: 140%;
 }
 
-.titolochisiamo h1 {
+.profile img {
+    float: left;
+    width: 100%;
+}
+
+.divblock h1 {
     color: #cccccc;
     text-align: center;
 }
