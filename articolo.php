@@ -21,6 +21,7 @@ if (mysqli_num_rows($result) != 0) {
         $corpo = $row['corpo'];
         $preview = substr($corpo,0,250);
         $autore = $row['autore'];
+        $gdrive = $row['gdrive'];
         echo '
               <div class="divtesto">
                   <p class=\'titolotesto\'>' . $titolo . '</p>
@@ -28,12 +29,20 @@ if (mysqli_num_rows($result) != 0) {
                   <p>Categoria: ' . $categoria . '</p>
                   <p>Autore: '. $autore.' </p>';
 
-        /* Se la sessione è loggata allora mostro tutto il corpo sennò solo la preview*/
+        /* Se la sessione è loggata allora mostro tutto il corpo e, se presente, il link, sennò solo la preview*/
         if ( isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
-            echo "<div class='testo'>  $corpo </div>";
+           if ($gdrive) {
+               echo "<div class='divtesto'> 
+                          <a href='$gdrive'>Link utile: $gdrive</a> 
+                     </div>";
+            }
+            echo "<div class='testo'> $corpo </div>";
         }
         else {
-            echo" <div class='testo'>  $preview  </div>";
+            echo" <div class='testo'>  $preview  </div>
+                  <div class='testo'>
+                      <p>Effettua il <a href='/innovation/login.php'>login</a> per visualizzare l'articolo completo</p>
+                  </div>";
         }
     }
 }

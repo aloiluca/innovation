@@ -61,7 +61,7 @@ if ( isset( $_POST['submit-button'])) {
             <form action="login.php" method="POST">
                 <div class="imgcontainer">
                     <i class="fas fa-user"></i>
-                    <!--                    <img src="resources/img/user.png" style="width: 100px" alt="Avatar" class="avatar">-->
+                    <!--<img src="resources/img/user.png" style="width: 100px" alt="Avatar" class="avatar">-->
                 </div>
 
                 <div class="form-input">

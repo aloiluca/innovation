@@ -10,6 +10,7 @@ if( isset( $_POST['crea_articolo']) ){
     $sottotitolo = replace_special_character($_POST['sottotitolo']);
     $categoria = replace_special_character($_POST['categoria']);
     $corpo = replace_special_character($_POST['corpo']);
+    $gdrive = replace_special_character($_POST['gdrive']);
 
 
     /* Setto il time local e richiedo l'ora corrente */
@@ -20,8 +21,8 @@ if( isset( $_POST['crea_articolo']) ){
     $autore = $_SESSION['user_name'];
 
 
-    $sql = "INSERT INTO `articoli`( `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`) 
-                VALUES ( '". $titolo ."','" . $sottotitolo ."','" . $autore ."','" . $corpo . "','". $categoria . "','" . $date . "' );";
+    $sql = "INSERT INTO `articoli`( `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`) 
+                VALUES ( '". $titolo ."','" . $sottotitolo ."','" . $autore ."','" . $corpo . "','". $categoria . "','" . $date . "','". $gdrive ."' );";
 
     $result = mysqli_query( $conn, $sql);
 
@@ -37,14 +38,14 @@ if( isset( $_POST['crea_articolo']) ){
 }
 
 
-
 ?>
 <div class="content-body">
     <form action="admin-articoli.php" method="POST">
-        Titolo: <input type="text" name="titolo"><br>
+        Titolo: <input type="text" name="titolo" required><br>
         Sottotitolo: <input type="text" name="sottotitolo"><br>
-        Categoria: <input type="text" name="categoria"><br>
-        Corpo: <input type="text" name="corpo"><br>
+        Categoria: <input type="text" name="categoria" required><br>
+        Corpo: <input type="text" name="corpo" required><br>
+        Link Gdrive: <input type="text" name="gdrive"><br>
 
         <button type="submit" name="crea_articolo">
             Crea
