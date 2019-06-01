@@ -21,7 +21,7 @@ require 'partials/header.php';
                 <!-- Autori -->
                 <label>Autori</label>
                 <select name="autore">
-                    <option value="autore">Autore</option>
+                    <option value="autore"></option>
                     <option value="root">root</option>
                     <option value="admin">admin</option>
                     <option value="Fiat">Fiat</option>
