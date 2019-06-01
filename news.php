@@ -45,7 +45,7 @@ if ( isset($_POST['submit-filter']) ) {
 
         echo '<div>Non hai selezionato nessun filtro</div>';
     } else {
-        if (isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
+        if (isset($_POST['categorie_scelte']) && $_POST['autore'] == "autore") {
 
             $categorie_scelte = $_POST["categorie_scelte"];
 
@@ -254,7 +254,7 @@ else {
                                
                                     <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
                                         <form action="/innovation/articolo.php" method="POST">
-              
+                                            <p>'.$titolo.'</p>
                                             <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
                                             <h4>' . $sottotitolo . '</h4>
                                             <h6>Data: ' . $data . '</h6>
