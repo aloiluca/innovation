@@ -10,26 +10,34 @@ require 'partials/header.php';
             <h1>NEWS</h1>
 
             <fieldset>
+
                 <legend>Ricerca per Autore e Categoria</legend>
 
                 <!-- Categorie -->
+                <div class="search">
                     <input type="checkbox" name="categorie_scelte[]" value="start up"> Start up
                     <input type="checkbox" name="categorie_scelte[]" value="digital marketing"> Digital Marketing
                     <input type="checkbox" name="categorie_scelte[]" value="new technology"> New Technology
                     <input type="checkbox" name="categorie_scelte[]" value="web design"> Web Design
+                </div>
 
                 <!-- Autori -->
-                <label>Autori</label>
-                <select name="autore">
-                    <option value="autore"></option>
-                    <option value="root">root</option>
-                    <option value="admin">admin</option>
-                    <option value="Fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
+                <div class="search">
+                    <label>Autori</label>
+                    <select name="autore">
+                        <option value="autore"></option>
+                        <option value="root">root</option>
+                        <option value="admin">admin</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
 
                 <!-- Submit -->
-                <input type="submit" name="submit-filter"</input>
+                <div class="search">
+                    <input type="submit" name="submit-filter"</input>
+                </div>
+
             </fieldset>
         </form>
     </div>
@@ -81,10 +89,12 @@ if ( isset($_POST['submit-filter']) ) {
                     echo '
                        <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
                            <form action="/innovation/articolo.php" method="POST">
-                                <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
+                                <div id="submit">
+                                    <h1><button type="submit" name="submit">' . $titolo . '</button></h1>
+                                </div>
                                  <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
                                  <h4>' . $sottotitolo . '</h4>
-                                 <h6>Data: ' . $data . '</h6>
+                                 <p>Data: ' . $data . '</p>
                                  <p>Categoria: ' . $categoria . '</p>
                                  <p>Autore: ' . $autore . '</p>
                             </form>
