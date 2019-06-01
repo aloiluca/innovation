@@ -55,7 +55,7 @@ session_start();    // Start della sessione
             echo'                    
                     <a href="/innovation/admin.php">Gestione Utenti</a>
                     <a href="/innovation/admin-articoli.php">Gestione Articoli</a>
-                    <!--<a href="/innovation/admin-tools.php">Gestione Tools</a>-->
+                    <a href="/innovation/admin-tools.php">Gestione Tools</a>
                     
                 ';
         }
