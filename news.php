@@ -35,7 +35,7 @@ require 'partials/header.php';
 
                 <!-- Submit -->
                 <div class="search">
-                    <input type="submit" name="submit-filter"</input>
+                    <input type="submit" name="submit-filter">
                 </div>
 
             </fieldset>
