@@ -30,10 +30,10 @@ if (mysqli_num_rows($result) != 0) {
 
         /* Se la sessione è loggata allora mostro tutto il corpo sennò solo la preview*/
         if ( isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
-            echo "<div class=\'testo\'>' . $corpo . '</div>";
+            echo "<div class='testo'>  $corpo </div>";
         }
         else {
-            echo" <div class=\'testo\'>' . $preview . '</div>";
+            echo" <div class='testo'>  $preview  </div>";
         }
     }
 }
