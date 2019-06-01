@@ -6,10 +6,10 @@ require 'config/database.php';
 
 if( isset( $_POST['crea_articolo']) ){
 
-    $title = $_POST['titolo'];
-    $subtitle = $_POST['sottotitolo'];
-    $categoy = $_POST['categoria'];
-    $body = $_POST['corpo'];
+    $titolo = replace_special_character($_POST['titolo']);
+    $sottotitolo = replace_special_character($_POST['sottotitolo']);
+    $categoria = replace_special_character($_POST['categoria']);
+    $corpo = replace_special_character($_POST['corpo']);
 
 
     /* Setto il time local e richiedo l'ora corrente */
@@ -19,10 +19,6 @@ if( isset( $_POST['crea_articolo']) ){
     /* Recupero il nome dell'utente loggato */
     $autore = $_SESSION['user_name'];
 
-    $titolo=replace_special_character($title);
-    $sottotitolo=replace_special_character($subtitle);
-    $categoria=replace_special_character($category);
-    $corpo=replace_special_character($body);
 
     $sql = "INSERT INTO `articoli`( `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`) 
                 VALUES ( '". $titolo ."','" . $sottotitolo ."','" . $autore ."','" . $corpo . "','". $categoria . "','" . $date . "' );";
