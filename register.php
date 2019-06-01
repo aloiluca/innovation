@@ -21,7 +21,9 @@ if (isset($_POST['submit-button'])) {
         /* Se le 2 password combaciano: altrimenti errore. */
         if ($password == $pwd_verify) {
             $hash = sha1($pwd_verify);
-        } //        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
+        }
+        /* Assegnazione di variabile in modo condizionale: $var = (condtion) ? true : false */
+        //        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
 
         else {
             echo '<div class="error-message">Le 2 password no cambaciano, riprova.</div>';
@@ -42,17 +44,19 @@ if (isset($_POST['submit-button'])) {
 
 
             /* Se $result è stata eseguita correttamente: altrimenti stampo messaggio di errore */
+            /* var_dump((bool) 1);    OUTPUT:  bool(true) */
             if ($result == 1) {
 
                 /* L'utente è stato registrato: reindirizzo a login */
                 header("Location: /innovation/login.php");
-                exit;
 
             } else {
                 echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
                 header("refresh:5'; Location: /innovation/register.php");
-                exit;
             }
+        }
+        else {
+            echo '<div class="error-message">L\'utente è già registrato</div>';
         }
     }
     mysqli_close($conn);
