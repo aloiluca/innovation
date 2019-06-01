@@ -41,6 +41,10 @@ h1 {
     text-align: center;
 }
 
+a {
+    color: rgb(221, 164, 21);
+}
+
 /* FINE GENERAL */
 
 
@@ -53,6 +57,7 @@ header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .navbar {
@@ -355,6 +360,7 @@ header {
 .testo {
     width: 60%;
     margin-left: 20%;
+    margin-top: 7%;
     font-family: 'Quicksand', sans-serif;
     font-size: 170%;
     color:white;
@@ -638,12 +644,6 @@ button:hover {
 /* Con schermo più piccolo di 1000px nascondo
    gli elementi della navbar e mostro l'hamburger*/
 @media screen and (max-width: 1260px) {
-    .navbar a {
-        display: none;
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
 
     /*#myHamburger {
         display: block;

@@ -39,17 +39,15 @@ if( isset( $_POST['crea_tool']) ){
 ?>
 <div class="content-body">
     <form action="admin-tools.php" method="POST">
-        Nome: <input type="text" name="nome"><br>
-        Tipo: <input type="text" name="tipo"><br>
+        Nome: <input type="text" name="nome" required><br>
+        Tipo: <input type="text" name="tipo" required><br>
         Corpo: <input type="text" name="corpo"><br>
-        Version: <input type="text" name="version"><br>
+        Version: <input type="text" name="version" required><br>
         Data Version: <input type="date" name="data-version"><br>
         Developer: <input type="text" name="dev"><br>
         Link al sito: <input type="text" name="link-sito"><br>
 
-        <button type="submit" name="crea_tool">
-            Crea
-        </button>
+        <button type="submit" name="crea_tool">Crea</button>
     </form>
 </div>
 <?php
