@@ -131,7 +131,7 @@ if ( isset($_POST['submit-filter']) ) {
                     echo '
                        <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
                            <form action="/innovation/articolo.php" method="POST">
-                                <h1><button type="submit" id="submit" class="titolo" name="submit">' . $titolo . '</button></h1>
+                                <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
                                  <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
                                  <h4>' . $sottotitolo . '</h4>
                                  <h6>Data: ' . $data . '</h6>

@@ -39,19 +39,24 @@ if( isset( $_POST['crea_articolo']) ){
 
 
 ?>
-<div class="content-body">
-    <form action="admin-articoli.php" method="POST">
-        Titolo: <input type="text" name="titolo" required><br>
-        Sottotitolo: <input type="text" name="sottotitolo"><br>
-        Categoria: <input type="text" name="categoria" required><br>
-        Corpo: <input type="text" name="corpo" required><br>
-        Link Gdrive: <input type="text" name="gdrive"><br>
 
-        <button type="submit" name="crea_articolo">
-            Crea
-        </button>
-    </form>
+<div class="content-body">
+    <div class="form">
+        <div class="form-input">
+            <form action="admin-articoli.php" method="POST">
+                <p><b>Inserisci un nuovo articolo</b></p>
+                <input type="text" class="register-field-a" placeholder="Titolo" name="titolo" required>
+                <input type="text" class="register-field-a" placeholder="Sottotitolo" name="sottotitolo" required>
+                <input type="text" class="register-field-a" placeholder="Categoria" name="categoria" required>
+                <input type="text" class="register-field-a" placeholder="Link Gdrive" name="gdrive">
+                <textarea class="register-field-d" rows="15" placeholder="Corpo" maxlength="8000" name="corpo"></textarea>
+
+                <button type="submit" class="submit-button" name="crea_articolo">Crea</button>
+            </form>
+        </div>
+    </div>
 </div>
+
 <?php
 require 'partials/footer.php';
 ?>

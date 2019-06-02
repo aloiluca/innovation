@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0)
                                 <div style="background-image:url(resources/img/articoli1/' . $img . ')"; class="tool">
                                 <p class="tooltesto"> 
                                         <input type="hidden" name="id" value="' . $id . '"></p>
-                                        <h1><button type="submit" id="submit" name="submit">' . $nome . '</button></h1>
+                                        <h1>' . $nome . '</h1>
                                         <h4>' . $tipologia . '</h4>
                                         <h6>Data: ' . $data_insert . '</h6>
                                 </p>        

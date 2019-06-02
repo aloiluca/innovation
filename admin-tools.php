@@ -38,17 +38,22 @@ if( isset( $_POST['crea_tool']) ){
 
 ?>
 <div class="content-body">
-    <form action="admin-tools.php" method="POST">
-        Nome: <input type="text" name="nome" required><br>
-        Tipo: <input type="text" name="tipo" required><br>
-        Corpo: <input type="text" name="corpo"><br>
-        Version: <input type="text" name="version" required><br>
-        Data Version: <input type="date" name="data-version"><br>
-        Developer: <input type="text" name="dev"><br>
-        Link al sito: <input type="text" name="link-sito"><br>
+    <div class="form">
+        <div class="form-input">
+            <form action="admin-tools.php" method="POST">
+                <p><b>Inserisci un nuovo tool</b></p>
+                <input type="text" class="register-field-a" placeholder="Nome" name="nome" required>
+                <input type="text" class="register-field-a" placeholder="Tipo" name="tipo" required>
+                <input type="text" class="register-field-a" placeholder="Version" name="version" required>
+                <input type="date" class="register-field-a" placeholder="Ultima release" name="data-version">
+                <input type="text" class="register-field-a" placeholder="Developer" name="dev">
+                <input type="text" class="register-field-a" placeholder="Link al sito" name="link-sito">
+                <textarea class="register-field-d" rows="15" placeholder="Corpo" maxlength="8000" name="corpo"></textarea>
 
-        <button type="submit" name="crea_tool">Crea</button>
-    </form>
+                <button type="submit" class="submit-button" name="crea_tool">Crea</button>
+            </form>
+        </div>
+    </div>
 </div>
 <?php
 require 'partials/footer.php';

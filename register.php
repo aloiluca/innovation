@@ -26,7 +26,7 @@ if (isset($_POST['submit-button'])) {
         //        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
 
         else {
-            echo '<div class="error-message">Le 2 password no cambaciano, riprova.</div>';
+            echo '<div class="error-message">Le 2 password non cambaciano, riprova.</div>';
             header("refresh:2'; Location: /register/register.php");
         }
 
@@ -79,7 +79,7 @@ if (isset($_POST['submit-button'])) {
                 <input type="password" class="register-field-a" placeholder="Inserisci Password" name="password" required>
                 <input type="password" class="register-field-a" placeholder="Conferma Password" name="password_verify" required>
 
-                <button type="submit" class="submit-register-button" name="submit-button"><b>Registrati</b></button>
+                <button type="submit" class="submit-button" name="submit-button"><b>Registrati</b></button>
             </div>
         </form>
     </div>

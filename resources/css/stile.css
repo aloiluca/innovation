@@ -16,15 +16,16 @@ body {  /* Definizione del body */
     color:white;
 }
 
-.titolo {
-    color: white;
-}
-
 button {
     background-color: Transparent;
     border: none;
     cursor:pointer;
     overflow: hidden;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
 }
 
 .content-body {  /* da aggiungere come container di ogni pagina */
@@ -44,6 +45,8 @@ h1 {
 a {
     color: rgb(221, 164, 21);
 }
+
+/*.error-message c'è sull'html ma manca sul css*/
 
 /* FINE GENERAL */
 
@@ -337,6 +340,20 @@ header {
 
 
 
+/* COMMUNITY */
+
+.comm {
+    font-size: 200%;
+    display: inline-block;
+    position: relative;
+    bottom: 2%;
+    margin: 5%;
+}
+
+/* FINE COMMUNITY */
+
+
+
 /* Full-width inputs */
 /*input[type=text], input[type=password], input[type=email] {
     width: 70%;
@@ -389,15 +406,6 @@ header {
 
 /* ADMIN */
 
-.funz {
-    width: 60%;
-    margin: auto;
-    height: auto;
-    background-color: #00665c;
-    color: #cccccc;
-    border-radius: 30px;
-}
-
 .title {
     margin:2% 2%;
 }
@@ -440,27 +448,27 @@ header {
 
 
 
-/* ADMIN-ARTICOLI */
+/* ADMIN-TOOLS E ADMIN-ARTICOLI*/
 
-
-
-/* FINE ADMIN-ARTICOLI */
-
-
-
-/* LOGIN E REGISTER */
-
-/* Set a style for all buttons */
-.register-button {
+.register-field-d {
     float: left;
-    width: 30%;
-    background-color: transparent;
-    margin-top: 4%;
-    margin-left: 10%;
-    margin-bottom: 4%;
-    border: none;
-    cursor: pointer;
+    padding: 2%;
+    margin-top: 5%;
+    width: 70%;
+    margin-bottom: 5%;
+    margin-left: 12%;
+    border-radius: 3px;
 }
+
+.register-field-d:focus {
+    border: 2px solid #72DEFF;
+}
+
+/* FINE ADMIN-TOOLS E ADMIN-ARTICOLI */
+
+
+
+/* LOGIN, REGISTER, ADMIN-ARTICOLI E ADMIN-TOOLS */
 
 .form {
     float: left;
@@ -473,7 +481,24 @@ header {
     border-radius: 30px;
 }
 
-.submit-register-button {
+.form-input {
+    padding: 5%;
+    stroke: black;
+    margin-bottom: 10%;
+}
+
+.form-input p {
+    color: #72DEFF;
+    text-align: center;
+}
+
+/* FINE LOGIN, REGISTER, ADMIN-ARTICOLI E ADMIN-TOOLS */
+
+
+
+/* REGISTER, ADMIN-ARTICOLI E ADMIN-TOOLS */
+
+.submit-button {
     float: left;
     width: 20%;
     margin-left: 40%;
@@ -492,12 +517,27 @@ header {
     margin-top: 2%;
     margin-left: 12%;
     margin-bottom: 4%;
-    /*display: inline-block;*/
 }
 
 .register-field-a:focus {
     border: 2px solid #72DEFF;
-    border-radius: 4px;
+}
+
+/* FINE REGISTER, ADMIN-ARTICOLI E ADMIN-TOOLS */
+
+
+
+/* LOGIN E REGISTER */
+
+/* Set a style for all buttons */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.imgcontainer i {
+    font-size: 7rem;
 }
 
 .register-field-b {
@@ -513,12 +553,23 @@ header {
     border: 2px solid #72DEFF;
 }
 
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
+/* FINE LOGIN E REGISTER */
+
+
+
+/* LOGIN */
+
+.register-button {
+    float: left;
+    width: 30%;
+    background-color: transparent;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    border: none;
+    cursor: pointer;
 }
 
-/* Extra style for the cancel button (red) */
 .login-button {
     float: left;
     width: 20%;
@@ -530,15 +581,6 @@ button:hover {
     background-color: #72DEFF;
 }
 
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-.imgcontainer i {
-    font-size: 7rem;
-}
-
 .form-container-button {
     float: left;
     width: 100%;
@@ -546,30 +588,7 @@ button:hover {
     margin-bottom: 3%;
 }
 
-.form-input label, legend{
-    font-size: 150%;
-}
-
-.form-input a {
-    color: #72DEFF;
-    text-decoration: none;
-}
-
-.form-input p {
-    color: #72DEFF;
-    text-align: center;
-}
-
-/* Add padding to containers */
-.form-input {
-    padding: 5%;
-    stroke: black;
-    margin-bottom: 10%;
-}
-
-/*.error-message c'è sull'html ma manca sul css*/
-
-/* FINE LOGIN E REGISTER */
+/* FINE LOGIN */
 
 
 
@@ -618,6 +637,13 @@ button:hover {
     float: right;
     text-align: left;
     padding-right: 20%;
+}
+
+.inst {
+    height: 80px;
+    width: 100px;
+    position: relative;
+    bottom: 70px;
 }
 
 /*#googlemap c'è sull'html ma manca sul css*/
@@ -741,4 +767,13 @@ button:hover {
 
 .intest{
     color: white;
+}
+
+.funz {
+    width: 60%;
+    margin: auto;
+    height: auto;
+    background-color: #00665c;
+    color: #cccccc;
+    border-radius: 30px;
 } */
