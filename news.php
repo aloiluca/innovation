@@ -2,7 +2,16 @@
 
 require 'config/database.php';
 require 'partials/header.php';
+
+/*messaggio: articolo cancellato correttamente */
+if ($_SESSION['articolo_cancellato']==TRUE) {
+    echo "articolo cancellato correttamente";
+    $_SESSION['articolo_cancellato'] = FALSE;
+  }
+
 ?>
+
+
 <div class="content-body">
 
     <div class="searchbar">
