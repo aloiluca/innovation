@@ -69,7 +69,7 @@
     </div>
 
     <div id="contattaciright">
-        <a href="https://www.instagram.com/ICTUNITO/?utm_source=ig_profile_share&igshid=zofhhnotdtce"><img src="resources/img/instagram.png" alt="instagram" height="80" width="100" </a>
+        <a href="https://www.instagram.com/ICTUNITO/?utm_source=ig_profile_share&igshid=zofhhnotdtce"><img class="inst" src="resources/img/instagram.png" alt="instagram" </a>
     </div>
     </div>
 </div>

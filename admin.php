@@ -29,7 +29,7 @@ if ( isset( $_POST['delete_utente'])) {
 
     }
     else {
-        echo '<div class="error-message">Non puoi elminare la tua utenza </div>';
+        echo '<div class="error-message">Non puoi eliminare la tua utenza </div>';
     }
 }
 
@@ -58,8 +58,6 @@ if ( isset( $_POST['delete_utente'])) {
 
 $sql = 'SELECT * FROM utenti';
 $result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
 
     while ($row = mysqli_fetch_assoc($result)) {
 
@@ -104,10 +102,6 @@ if (mysqli_num_rows($result) > 0) {
                             
                     ';
             }
-        } else {
-            echo '<div class="messaggio-avviso">Non ci sono utenti nel database</div>';
-        }
-
 
         ?>
         </table>

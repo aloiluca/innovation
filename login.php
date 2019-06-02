@@ -66,7 +66,7 @@ if ( isset( $_POST['submit-button'])) {
 
                 <div class="form-input">
                     <p><b>ACCEDI</b></p>
-                    <input type="text" class="register-field-b" placeholder="E-mail" name="email" required>
+                    <input type="email" class="register-field-b" placeholder="E-mail" name="email" required>
                     <input type="password" class="register-field-b" placeholder="Password" name="password" required>
 
                     <div class="form-container-button">
