@@ -3,7 +3,7 @@
 <div class="footer">
     <div class="footerFloat">
         <img class="logo" src="resources/img/logo.png">
-        <a href=""><img class="instagram" src="resources/img/instagram.jpg"></a>
+        <a href="https://www.instagram.com/ICTUNITO/?utm_source=ig_profile_share&igshid=zofhhnotdtce"><img class="instagram" src="resources/img/instagram.jpg"></a>
         <p>Seguici su Instagram!</p>
     </div>
     <div class="footerFloat">
