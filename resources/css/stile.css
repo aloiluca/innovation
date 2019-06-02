@@ -296,12 +296,14 @@ header {
     /*box-shadow: inset 5px 5px 5px #161e22;*/
     color: white;
     border-radius: 15%;
+    overflow: hidden;
+
 }
 
 #submit {
     width: 100%;
     word-wrap: break-word;
-    font-size: 80%;
+    font-size: 40%;
     color: white;
 }
 

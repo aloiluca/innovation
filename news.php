@@ -26,16 +26,21 @@ require 'partials/header.php';
                     <label>Autori</label>
                     <select name="autore">
                         <option value="autore"></option>
-                        <option value="root">root</option>
-                        <option value="admin">admin</option>
-                        <option value="Fiat">Fiat</option>
-                        <option value="audi">Audi</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Luca">Luca</option>
+                        <option value="Matteo">Matteo</option>
+                        <option value="Flavio">Flavio</option>
+                        <option value="Elisa">Elisa</option>
+                        <option value="Rachele">Rachele</option>
+                        <option value="Andrea">Andrea</option>
+                        <option value="Mahdi">Mahdi</option>
+                        <option value="Gabriele">Gabriele</option>
                     </select>
                 </div>
 
                 <!-- Submit -->
                 <div class="search">
-                    <input type="submit" name="submit-filter"</input>
+                    <input type="submit" name="submit-filter">
                 </div>
 
             </fieldset>
@@ -49,11 +54,11 @@ require 'partials/header.php';
 
 if ( isset($_POST['submit-filter']) ) {
 
-    if (!isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
+    if (!isset($_POST['categorie_scelte']) && $_POST['autore'] == "autore") {
 
         echo '<div>Non hai selezionato nessun filtro</div>';
     } else {
-        if (isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
+        if ( isset($_POST['categorie_scelte']) && $_POST['autore'] == "autore" ) {
 
             $categorie_scelte = $_POST["categorie_scelte"];
 
@@ -106,7 +111,7 @@ if ( isset($_POST['submit-filter']) ) {
             } else {
                 echo 'Non ci sono articoli per la categoria scelta. ';
             }
-        } elseif (isset($_POST['autore']) && $_POST['autore'] != 'autore' && !isset($_POST['categorie_scelte'])) {
+        } elseif ( (isset($_POST['autore']) && $_POST['autore'] != 'autore') && !isset($_POST['categorie_scelte']) ) {
 
             $autore = $_POST["autore"];
 
@@ -146,7 +151,7 @@ if ( isset($_POST['submit-filter']) ) {
             } else {
                 echo 'Non ci sono articoli per l\'autore scelto. ';
             }
-        } elseif (isset($_POST['autore']) && $_POST['autore'] != 'autore' && isset($_POST['categorie_scelte'])) {
+        } else {
 
             $categorie_scelte = $_POST["categorie_scelte"];
 
@@ -197,41 +202,6 @@ if ( isset($_POST['submit-filter']) ) {
 
             } else {
                 echo 'Non ci sono articoli per i filtri scelti. ';
-            }
-        } else {
-            /* Stampo tutti gli articoli presenti nel database */
-            $sql = "SELECT * FROM articoli";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-
-                while ($row = mysqli_fetch_assoc($result)) {
-
-                    $titolo = $row["titolo"];
-                    $sottotitolo = $row["sottotitolo"];
-                    $categoria = $row["categoria"];
-                    $data = $row["data"];
-                    $id = $row["id"];
-                    $autore = $row["autore"];
-
-                    /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
-                    $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
-
-                    echo '
-                                
-                                
-                                <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
-                                    <form action="/innovation/articolo.php" method="POST">
-                                        <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
-                                        <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
-                                        <h4>' . $sottotitolo . '</h4>
-                                        <h6>Data: ' . $data . '</h6>
-                                        <p>Categoria: ' . $categoria . '</p>
-                                        <p>Categoria: ' . $autore . '</p>
-                                    </form>
-                                </div> 
-                        ';
-                }
             }
         }
     }
