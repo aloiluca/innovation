@@ -52,7 +52,7 @@ if (isset($_POST['submit-button'])) {
 
             } else {
                 echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
-                header("refresh:5'; Location: /innovation/register.php");
+                header("refresh: 1'; Location: /innovation/register.php");
             }
         }
         else {
