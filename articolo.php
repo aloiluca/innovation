@@ -12,6 +12,7 @@ require 'partials/header.php';
 $id_articolo = $_POST['id'];
 $sql = "SELECT * FROM articoli where id = ".$id_articolo.";";
 $result = mysqli_query($conn, $sql);
+
 if (mysqli_num_rows($result) != 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $titolo = $row["titolo"];
@@ -38,6 +39,14 @@ if (mysqli_num_rows($result) != 0) {
             }
             echo "<div class='testo'> $corpo </div>";
         }
+
+        if ( isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+
+            echo "<form action='articolo.php' method='POST'>
+            <input type='hidden' style='display:none' name='id' value='" . $_POST['id'] . "'>
+            <button type='submit' name='delete_articolo'>DELETE</button>
+            </form>";
+        }
         else {
             echo" <div class='testo'>  $preview  </div>
                   <div class='testo'>
@@ -46,8 +55,18 @@ if (mysqli_num_rows($result) != 0) {
         }
     }
 }
+/*Cancellazione articolo */
+if ( isset( $_POST['delete_articolo'])) {
+    $sql = "DELETE FROM articoli WHERE id = ". $_POST['id'] .";";
+    $result = mysqli_query( $conn, $sql);
+    header("Location: /innovation/news.php");
+    $_SESSION['articolo_cancellato']= TRUE;
+}
+if (!$result) {
+    echo "<div class='error-message'>articolo non cancellato</div>";
+}
+
 ?>
-</div>
 </div>
 
 <?php
