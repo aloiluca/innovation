@@ -23,19 +23,3 @@
 <div class="underFooter">
     <p>InnovationTeam © 2019, all rights reserved</p>
 </div>
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="footer">
-    <a id="footer-desc">Seguici sui nostri canali social</a>
-    <a id="facebook" href=""><i class="fab fa-facebook-f"></i></a>
-    <a id="instagram" href=""><i class="fab fa-instagram"></i></a>
-    <a id="linkedin" href=""><i class="fab fa-linkedin-in"></i></a>
-</div> -->

@@ -53,12 +53,10 @@ $_SESSION['articolo_cancellato'] = FALSE; /*necessario per evitare errori in new
 
         <?php
         if ( isset( $_SESSION['admin'])) {
-            echo'                    
-                    <a href="/innovation/admin.php">Gestione Utenti</a>
-                    <a href="/innovation/admin-articoli.php">Gestione Articoli</a>
-                    <a href="/innovation/admin-tools.php">Gestione Tools</a>
-                    
-                ';
+            echo"   <a href='/innovation/admin.php'>Gestione Utenti</a>
+                    <a href='/innovation/admin-articoli.php'>Gestione Articoli</a>
+                    <a href='/innovation/admin-tools.php'>Gestione Tools</a>
+                    ";
         }
 
         /* Login / Logout e logo utente da fontAwesome */
