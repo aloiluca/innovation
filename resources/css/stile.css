@@ -41,6 +41,10 @@ h1 {
     text-align: center;
 }
 
+a {
+    color: rgb(221, 164, 21);
+}
+
 /* FINE GENERAL */
 
 
@@ -53,6 +57,7 @@ header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .navbar {
@@ -266,21 +271,37 @@ header {
     color:white;
 }
 
+.search {
+    display: inline-block;
+    padding: 0 2.4%;
+    border-right: 2px solid grey;
+}
+
+.search:last-child {
+    padding: 0 5%;
+    border: none;
+}
+
 .articolo {
     float: left;
     width: 18%;
-    height: 16%;
-    padding: 3% ;
-    padding-top: 8%;
-    padding-bottom: 3%;
-    margin-top: 3%;
-    margin-right: 0.5%;
-    margin-left: 0.5%;
-    margin-bottom: 10%;
+    height: 20%;
+    padding: 3%;
+    margin: 3% 0.5% 5%;
     background-color: #232F34;
-    box-shadow: inset 5px 5px 5px #161e22;
+    word-wrap: break-word;
+    /*box-shadow: inset 5px 5px 5px #161e22;*/
     color: white;
-    border-radius: 20%;
+    border-radius: 15%;
+    overflow: hidden;
+
+}
+
+#submit {
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 40%;
+    color: white;
 }
 
 .articolo:hover {
@@ -339,6 +360,7 @@ header {
 .testo {
     width: 60%;
     margin-left: 20%;
+    margin-top: 7%;
     font-family: 'Quicksand', sans-serif;
     font-size: 170%;
     color:white;
@@ -622,12 +644,6 @@ button:hover {
 /* Con schermo più piccolo di 1000px nascondo
    gli elementi della navbar e mostro l'hamburger*/
 @media screen and (max-width: 1260px) {
-    .navbar a {
-        display: none;
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
 
     /*#myHamburger {
         display: block;
