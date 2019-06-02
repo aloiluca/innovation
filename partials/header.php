@@ -2,6 +2,7 @@
 //error_reporting(E_ALL); //Imposta quali errori PHP sono segnalati
 //ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
 session_start();    // Start della sessione
+$_SESSION['articolo_cancellato'] = FALSE; /*necessario per evitare errori in news riguardo la cancellazione degli articoli*/
 ?>
 
 <!-- <head> del sito web -->
