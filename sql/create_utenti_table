@@ -17,7 +17,7 @@ CREATE TABLE `innovation`.`utenti` (
 
 /* la password è lo sha1() della stringa 'admin' */
 INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
-    VALUES (1,'root','root','root@info.it','d033e22ae348aeb5660fc2140aec35850c4da997', TRUE);
+    VALUES (1,'Admin','root','root@info.it','d033e22ae348aeb5660fc2140aec35850c4da997', TRUE);
 
 
 /* per tutti gli utenti Admin la password è la stringa del nome minusola: es: 'luca' */
