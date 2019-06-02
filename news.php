@@ -41,7 +41,7 @@ require 'partials/header.php';
 
 if ( isset($_POST['submit-filter']) ) {
 
-    if (!isset($_POST['categorie_scelte']) && $_POST['autore'] = "autore") {
+    if (!isset($_POST['categorie_scelte']) && $_POST['autore'] == "autore") {
 
         echo '<div>Non hai selezionato nessun filtro</div>';
     } else {
