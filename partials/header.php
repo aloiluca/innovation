@@ -1,7 +1,13 @@
 <?php
 //error_reporting(E_ALL); //Imposta quali errori PHP sono segnalati
 //ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
+
 session_start();    // Start della sessione
+
+/*evita errori in news riguardo la cancellazione degli articoli quando non si è loggati*/
+if (!isset($_SESSION['logged'])) {
+    $_SESSION['articolo_cancellato'] = FALSE;
+}
 ?>
 
 <!-- <head> del sito web -->
@@ -52,12 +58,10 @@ session_start();    // Start della sessione
 
         <?php
         if ( isset( $_SESSION['admin'])) {
-            echo'                    
-                    <a href="/innovation/admin.php">Gestione Utenti</a>
-                    <a href="/innovation/admin-articoli.php">Gestione Articoli</a>
-                    <a href="/innovation/admin-tools.php">Gestione Tools</a>
-                    
-                ';
+            echo"   <a href='/innovation/admin.php'>Gestione Utenti</a>
+                    <a href='/innovation/admin-articoli.php'>Gestione Articoli</a>
+                    <a href='/innovation/admin-tools.php'>Gestione Tools</a>
+                    ";
         }
 
         /* Login / Logout e logo utente da fontAwesome */

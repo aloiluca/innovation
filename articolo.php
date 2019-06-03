@@ -44,7 +44,7 @@ if (mysqli_num_rows($result) != 0) {
 
             echo "<form action='articolo.php' method='POST'>
             <input type='hidden' style='display:none' name='id' value='" . $_POST['id'] . "'>
-            <button type='submit' name='delete_articolo'>DELETE</button>
+            <button type='submit' name='delete_articolo' class='delete_button'>DELETE</button>
             </form>";
         }
         else {

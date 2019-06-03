@@ -34,7 +34,6 @@ if ( isset( $_POST['submit-button'])) {
 
                     if ($row['admin'] == TRUE) {
                         $_SESSION['admin'] = TRUE;
-                        $_SESSION['articolo_cancellato'] = FALSE;
                         header("Location: /innovation/admin.php");
                         //exit;
                     } else {
