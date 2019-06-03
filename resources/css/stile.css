@@ -28,7 +28,8 @@ button:hover {
     opacity: 0.8;
 }
 
-.content-body {  /* da aggiungere come container di ogni pagina */
+/* da aggiungere come container di ogni pagina */
+.content-body {
     float: left;
     width: 98%;
     margin-left: 0.5%;
@@ -73,12 +74,11 @@ header {
 .navbar a {
     float: left;
     display: block;
-    color: white;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     padding: 1.6% 1.5%;
     text-decoration: none;
-    font-size: 1.3em; /* @todo ??? non funge */
+    font-size: 1.3em; /* non funziona */
     font-weight: bold;
 }
 
@@ -180,10 +180,9 @@ header {
 
 .intro {
     padding: 1%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5%;
-    margin-bottom: 2%;
+    margin: auto;
+    margin-top: 2.5% !important;
+    margin-bottom: 2% !important;
     width: 90%;
     border-radius: 2em;
     color: white;
@@ -419,8 +418,8 @@ header {
     font-weight: 700;
     letter-spacing: 3px;
     background: #FFFFFF;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.3s ease 0s;
 }
 
@@ -451,7 +450,10 @@ header {
     padding: 8px;
 }
 
-.table tr:nth-child(odd){background-color: rgb #242626}
+.table tr:nth-child(odd){
+    background-color: rgb(36,38,38);
+}
+
 .table tr:nth-child(even) {
     background-color: rgb(24,26,26);
     color: #cccccc;
