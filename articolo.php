@@ -32,29 +32,28 @@ if (mysqli_num_rows($result) != 0) {
 
         /* Se la sessione è loggata allora mostro tutto il corpo e, se presente, il link, sennò solo la preview*/
         if ( isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
-           if ($gdrive) {
-               echo "<div class='divtesto'> 
+            if ($gdrive) {
+                echo "<div class='divtesto'> 
                           <a href='$gdrive'>Link utile: $gdrive</a> 
                      </div>";
-            }
+                }
             echo "<div class='testo'> $corpo </div>";
-        }
-
-        if ( isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
-
-            echo "<form action='articolo.php' method='POST'>
-            <input type='hidden' style='display:none' name='id' value='" . $_POST['id'] . "'>
-            <button type='submit' name='delete_articolo' class='delete_button'>DELETE</button>
-            </form>";
-        }
+            }
         else {
             echo" <div class='testo'>  $preview  </div>
                   <div class='testo'>
                       <p>Effettua il <a href='/innovation/login.php'>login</a> per visualizzare l'articolo completo</p>
                   </div>";
+            }
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+            echo "<form action='articolo.php' method='POST'>
+            <input type='hidden' style='display:none' name='id' value='" . $_POST['id'] . "'>
+            <button type='submit' name='delete_articolo' class='delete_button'>DELETE</button>
+            </form>";
+            }
         }
     }
-}
+
 /*Cancellazione articolo */
 if ( isset( $_POST['delete_articolo'])) {
     $sql = "DELETE FROM articoli WHERE id = ". $_POST['id'] .";";
