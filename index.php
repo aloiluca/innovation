@@ -19,10 +19,8 @@ require 'partials/header.php';
 
     <div id="let-desc">
         <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-            and going through the cites of the word in classical literature, discovered the undoubtable source.
+            “L'innovazione è lo strumento specifico dell'imprenditoria. L'atto che favorisce il successo con una nuova capacità di creare benessere.”
+            PETER FERDINAND DRUCKER
         </p>
     </div>
 </div>
@@ -35,10 +33,9 @@ require 'partials/header.php';
 
     <div id="let-desc">
         <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-            and going through the cites of the word in classical literature, discovered the undoubtable source.
+            “La comunicazione umana segue precise leggi. La comunicazione va presidiata e non può essere data per scontata.
+            Altrimenti i «non detti», le cose mai esplicitate, i conflitti soffocati sul lungo periodo diventano una valanga che travolge motivazione e relazioni interpersonali. Anche i moderni mezzi di comunicazione (email, socialnetwork...), se non sorvegliati, aumentano la percentuale di interpretazione dei messaggi e creano conflitto. Bisogna allenarsi
+            specificamente a gestire i conflitti nel team. Questo significa creare una cultura del confronto costruttivo.”
         </p>
     </div>
 </div>
@@ -51,10 +48,8 @@ require 'partials/header.php';
 
     <div id="let-desc">
         <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-            and going through the cites of the word in classical literature, discovered the undoubtable source.
+            “Le nuove tecnologie dell’informazione sono strumenti, e per avere un impatto gli strumenti necessitano di utilizzatori, che a loro volta hanno bisogno di scopi, direzioni e motivazioni.”
+            MOISÉS NAÍM
         </p>
     </div>
 </div>

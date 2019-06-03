@@ -35,10 +35,15 @@ if ($_SESSION['articolo_cancellato']==TRUE) {
                     <label>Autori</label>
                     <select name="autore">
                         <option value="autore"></option>
-                        <option value="root">root</option>
                         <option value="admin">admin</option>
+                        <option value="Luca">Luca</option>
                         <option value="Gabriele">Gabriele</option>
-                        <option value="Mattoe">Matteo</option>
+                        <option value="Matteo">Matteo</option>
+                        <option value="Flavio">Flavio</option>
+                        <option value="Elisa">Elisa</option>
+                        <option value="Rachele">Rachele</option>
+                        <option value="Andrea">Andrea</option>
+                        <option value="Matteo">Mahdi</option>
                     </select>
                 </div>
 
