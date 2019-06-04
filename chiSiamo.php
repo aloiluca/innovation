@@ -14,12 +14,12 @@
         </div>
 
         <div class="profile">
-            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
+            <img src="resources/img/cactuswoman.png" alt="immagineprofilo">
             <label>Elisa Sorri</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
+            <img src="resources/img/cactuswoman.png" alt="immagineprofilo">
             <label>Rachele Veronese</label>
         </div>
 
