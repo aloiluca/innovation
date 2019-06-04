@@ -9,42 +9,42 @@
     <h1>Il nostro team</h1>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Matteo Ninotti</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Elisa Sorri</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Rachele Veronese</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Andrea Carlucci</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Luca Aloi</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Gabriele Gennari</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Mahdi Sarhan</label>
         </div>
 
         <div class="profile">
-            <img src="resources/img/lego.png" alt="immagineprofilo">
+            <img src="resources/img/cactuspen.png" alt="immagineprofilo">
             <label>Flavio Pirazzi</label>
         </div>
 
