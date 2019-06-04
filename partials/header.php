@@ -40,7 +40,7 @@ if (!isset($_SESSION['logged'])) {
         <!-- Logo -->
         <div id="logo">
             <a href="index.php">
-                <img src="resources/img/logo.png" alt="Logo">
+                <img src="resources/img/cactuspen.png" alt="Logo">
             </a>
         </div>
         <!-- Fine logo-->
