@@ -34,7 +34,7 @@ if (mysqli_num_rows($result) != 0) {
         if ( isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
             if ($gdrive) {
                 echo "<div class='divtesto'> 
-                          <a href='$gdrive'>Link utile: $gdrive</a> 
+                          <a target='_blank' href='$gdrive'>Link utile: $gdrive</a> 
                      </div>";
                 }
             echo "<div class='testo'> $corpo </div>";
