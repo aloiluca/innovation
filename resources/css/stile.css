@@ -47,6 +47,10 @@ a {
     color: rgb(221, 164, 21);
 }
 
+.messaggio-avviso {
+    margin: 2%;
+}
+
 /*.error-message c'è sull'html ma manca sul css*/
 
 /* FINE GENERAL */
@@ -65,7 +69,7 @@ header {
 }
 
 .navbar {
-    background-color: #00665c;
+    background-color: rgb(221, 164, 21);
     overflow: visible;
     float: left;
     width: 100%;
@@ -200,6 +204,7 @@ header {
     background-color: rgb(24,26,26);
     width: 100%;
     overflow: hidden;
+    margin-top: 2%;
 }
 
 .footerFloat a{
@@ -467,8 +472,6 @@ header {
     background-color: #00665c;
     color: white;
 }
-
-/*.messaggio-avviso c'è sull'html ma manca sul css*/
 
 /* FINE ADMIN */
 

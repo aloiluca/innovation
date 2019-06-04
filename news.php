@@ -55,7 +55,6 @@ if ($_SESSION['articolo_cancellato']==TRUE) {
             </fieldset>
         </form>
     </div>
-</div>
 
 
 <?php
@@ -118,7 +117,7 @@ if ( isset($_POST['submit-filter']) ) {
                 }
 
             } else {
-                echo 'Non ci sono articoli per la categoria scelta. ';
+                echo '<p class="messaggio-avviso">Non ci sono articoli per la categoria scelta.</p> ';
             }
         } elseif ( (isset($_POST['autore']) && $_POST['autore'] != 'autore') && !isset($_POST['categorie_scelte']) ) {
 
@@ -158,7 +157,7 @@ if ( isset($_POST['submit-filter']) ) {
                 }
 
             } else {
-                echo 'Non ci sono articoli per l\'autore scelto. ';
+                echo '<p class="messaggio-avviso">Non ci sono articoli per l\'autore scelto.</p> ';
             }
         } else {
 
@@ -210,7 +209,7 @@ if ( isset($_POST['submit-filter']) ) {
                 }
 
             } else {
-                echo 'Non ci sono articoli per i filtri scelti. ';
+                echo '<p class="messaggio-avviso">Non ci sono articoli per i filtri scelti </p>' ;
             }
         }
     }
@@ -249,6 +248,9 @@ else {
                                 </div> 
                         ';
         }
+    }
+    else {
+        echo '<p class="messaggio-avviso">Non è presente alcun articolo </p>';
     }
 }
 

@@ -10,24 +10,24 @@ CREATE TABLE `innovation`.`articoli` (
         PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (1,'TITOLO','SOTTOTITOLOLOLOLOOOOOOOOOOO','admin','Lorem Ipsum è un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
-        campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato. Fu','start up', CURRENT_DATE, 'link');
+    VALUES (1,'TITOLO','SOTTOTITOLOLOLOLOOOOOOOOOOO','admin','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
+        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
+        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
+        pervenendoci sostanzialmente inalterato.','start up', CURRENT_DATE, 'https://drive.google.com/open?id=108mvCFuJDoYFYlUXvpGxSeOdsUNnA5qj');
 
 
 INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (2,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','admin','Lorem Ipsum è un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
-        campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato. Fu','web design', CURRENT_DATE , 'link');
+    VALUES (2,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','admin','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
+        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
+        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
+        pervenendoci sostanzialmente inalterato.','web design', CURRENT_DATE , 'lhttps://www.theverge.com/2019/6/3/18651071/mac-pro-design-specs-hands-on-photos-video-price');
 
 
 INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (3,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','root','Lorem Ipsum è un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
-        campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato. Fu','web design', CURRENT_DATE , 'link');
+    VALUES (3,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','root','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
+        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
+        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
+        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
+        pervenendoci sostanzialmente inalterato.','web design', CURRENT_DATE , 'https://medium.com/@alexewerlof/a-brief-history-about-apis-f1be2f59c858');

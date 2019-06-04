@@ -19,7 +19,6 @@ CREATE TABLE `innovation`.`utenti` (
 INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
     VALUES (1,'Admin','root','root@info.it','d033e22ae348aeb5660fc2140aec35850c4da997', TRUE);
 
-
 /* per tutti gli utenti Admin la password è la stringa del nome minusola: es: 'luca' */
 INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
     VALUES (2,'Luca','Aloi','luca.aloi@edu.unito.it','a05bd890c4868ea1807f8564055d1fba77c6ba81', TRUE);
@@ -44,3 +43,6 @@ INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
 
 INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
     VALUES (9,'Gabriele','Gennari','gabriele.gennanri@edu.unito.it','99e9950b9bf1001c4486de413a6d490f474e2407', TRUE);
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (10,'Utente','prova','utente@user.it','b3daa77b4c04a9551b8781d03191fe098f325e67', FALSE);

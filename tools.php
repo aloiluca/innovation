@@ -5,7 +5,7 @@ require 'partials/header.php';
 ?>
 
    <div class="content-body">
-       <h1 style="text-align: center">TOOLS</h1>
+       <h1>TOOLS</h1>
 
 
 <?php
@@ -42,7 +42,7 @@ if (mysqli_num_rows($result) > 0)
 }
 else
 {
-    echo "Non sono presenti tools";
+    echo "<p class='messaggio-avviso'>Non è presente presente alcun tool. </p>";
 }
 
 echo '</div>';

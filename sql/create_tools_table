@@ -12,7 +12,7 @@ CREATE TABLE `innovation`.`tools` (
         PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 INSERT INTO `tools`(`id`, `tipo`, `nome`, `corpo`, `version`, `data_version`, `dev`,`link_sito`, `autore`, `data_insert`)
-    VALUES(1, 'Sviluppo Software', 'Git', 'Git è un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando, creato da Linus Torvalds nel 2005. La sua progettazione si ispirò a strumenti analoghi come BitKeeper e Monotone.', '2.21.0', '
+    VALUES(1, 'Sviluppo Software', 'Git', 'Git &agrave un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando, creato da Linus Torvalds nel 2005. La sua progettazione si ispir&ograve a strumenti analoghi come BitKeeper e Monotone.', '2.21.0', '
 2019-02-2', 'Linus Torvalds', 'https://git-scm.com/download', 'pippo', '2019-05-06');
 
 INSERT INTO `tools`(`id`, `tipo`, `nome`, `corpo`, `version`, `data_version`, `dev`,`link_sito`, `autore`, `data_insert`)

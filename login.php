@@ -77,7 +77,7 @@ if ( isset( $_POST['submit-button'])) {
             </form>
         </div>
     </div>
+
 <?php
 require 'partials/footer.php';
-
 ?>
