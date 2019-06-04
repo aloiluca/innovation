@@ -43,7 +43,7 @@ if ($_SESSION['articolo_cancellato']==TRUE) {
                         <option value="Elisa">Elisa</option>
                         <option value="Rachele">Rachele</option>
                         <option value="Andrea">Andrea</option>
-                        <option value="Matteo">Mahdi</option>
+                        <option value="Mahdi">Mahdi</option>
                     </select>
                 </div>
 
