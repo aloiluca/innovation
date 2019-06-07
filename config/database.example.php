@@ -4,11 +4,7 @@
  * 2. Setta le variabili della tua connessione.
  * */
 
-/* Creazione variabili per connessione al database */
-$servername = "localhost";
-$username = "root";
-$password = "laravel";
-$db = "innovation";
+/* Inserire le variabili per connessione al database */
 
 getConnection('','','','');
 
