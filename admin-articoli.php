@@ -1,16 +1,15 @@
 <?php
 require 'partials/header.php';
-require 'partials/functions.php';
 require 'config/database.php';
 
 
 if( isset( $_POST['crea_articolo']) ){
 
-    $titolo = replace_special_character($_POST['titolo']);
-    $sottotitolo = replace_special_character($_POST['sottotitolo']);
-    $categoria = replace_special_character($_POST['categoria']);
-    $corpo = replace_special_character($_POST['corpo']);
-    $gdrive = replace_special_character($_POST['gdrive']);
+    $titolo = $_POST['titolo'];
+    $sottotitolo = $_POST['sottotitolo'];
+    $categoria = $_POST['categoria'];
+    $corpo = $_POST['corpo'];
+    $gdrive = $_POST['gdrive'];
 
 
     /* Setto il time local e richiedo l'ora corrente */
