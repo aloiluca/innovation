@@ -2,6 +2,9 @@
 //error_reporting(E_ALL); //Imposta quali errori PHP sono segnalati
 //ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
 
+require 'partials/functions.php';
+
+
 session_start();    // Start della sessione
 
 /*evita errori in news riguardo la cancellazione degli articoli quando non si è loggati*/
