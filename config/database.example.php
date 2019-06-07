@@ -5,15 +5,10 @@
  * */
 
 /* Creazione variabili per connessione al database */
-$servername = "";
-$username = "";
-$password = "";
-$db = "";
+$servername = "localhost";
+$username = "root";
+$password = "laravel";
+$db = "innovation";
 
-$conn = mysqli_connect($servername, $username, $password, $db);
+getConnection('','','','');
 
-if (!$conn) {
-    die("</br>" . "Connection failed: " . mysqli_connect_error());
-} else {
-//    echo 'Connected to db';
-}
