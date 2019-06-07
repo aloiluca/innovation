@@ -1,0 +1,14 @@
+
+INSERT INTO `tools`(`id`, `tipo`, `nome`, `corpo`, `version`, `data_version`, `dev`,`link_sito`, `autore`, `data_insert`)
+    VALUES(1, 'Sviluppo Software', 'Git', 'Git è un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando, creato da Linus Torvalds nel 2005. La sua progettazione si ispirò a strumenti analoghi come BitKeeper e Monotone.', '2.21.0', '
+2019-02-2', 'Linus Torvalds', 'https://git-scm.com/download', 'pippo', '2019-05-06');
+
+--
+
+INSERT INTO `tools`(`id`, `tipo`, `nome`, `corpo`, `version`, `data_version`, `dev`,`link_sito`, `autore`, `data_insert`)
+    VALUES(2, 'IDE', 'PHPStorm', 'Ciccio', '3.4.5', '2019-05-05', 'JetBrains', 'https://www.jetbrains.com/phpstorm/download/download-thanks.html', 'pippo', '2019-05-06');
+
+--
+
+INSERT INTO `tools`(`id`, `tipo`, `nome`, `corpo`, `version`, `data_version`, `dev`,`link_sito`, `autore`, `data_insert`)
+    VALUES(3, 'Mockup/wireframes', 'Balsamiq Mockup', 'ciao', '5.3.22', '2019-05-05', 'Pluto', 'https://balsamiq.com/wireframes/desktop/', 'Boh', '2019-05-06');

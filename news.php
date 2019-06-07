@@ -1,8 +1,6 @@
 <?php
-
-require 'config/database.php';
 require 'partials/header.php';
-require 'partials/functions.php';
+require 'config/database.php';
 
 /*messaggio: articolo cancellato correttamente */
 if ($_SESSION['articolo_cancellato']==TRUE) {

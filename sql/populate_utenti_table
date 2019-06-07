@@ -1,0 +1,43 @@
+/* per tutti gli utenti Admin la password è la stringa del nome minusola: es: 'luca' */
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (2,'Luca','Aloi','luca.aloi@edu.unito.it','a05bd890c4868ea1807f8564055d1fba77c6ba81', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (3,'Matteo','Ninotti','matteo.ninotti@edu.unito.it','40ffa173eaacf794b2ce046f0611592180929763', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (4,'Flavio','Pirazzi','flavio.pirazzi@edu.unito.it','78425c32ad78109b2b4aa7b799549c63868ddfc5', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (5,'Elisa','Sorri','elisa.sorri@edu.unito.it','03c3312a8a1d1cce622270979c12bf9452f7d65d', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (6,'Rachele','Veronese','rachele.veronese@edu.unito.it','1f63e300d7c26d318300ee0edcc87916e544f078', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (7,'Andrea','Carlucci','andrea.carlucci@edu.unito.it','fdb87dfd199045af7165780b11640b83768a0d57', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (8,'Mahdi','Sarhan','mahdi.sarhan@edu.unito.it','02e3c871db62503d8539431c7843e7557c2fde17', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (9,'Gabriele','Gennari','gabriele.gennanri@edu.unito.it','99e9950b9bf1001c4486de413a6d490f474e2407', TRUE);
+
+--
+
+INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
+    VALUES (10,'Utente','prova','utente@user.it','b3daa77b4c04a9551b8781d03191fe098f325e67', FALSE);

@@ -1,17 +1,16 @@
 <?php
 require 'partials/header.php';
-require 'partials/functions.php';
 require 'config/database.php';
 
 
 if( isset( $_POST['crea_tool']) ){
 
-    $nome = replace_special_character($_POST['nome']);
-    $tipo = replace_special_character($_POST['tipo']);
-    $corpo = replace_special_character($_POST['corpo']);
+    $nome = $_POST['nome'];
+    $tipo = $_POST['tipo'];
+    $corpo = $_POST['corpo'];
     $version = $_POST['version'];
     $data_version = $_POST['data-version'];
-    $dev = replace_special_character($_POST['dev']);
+    $dev = $_POST['dev'];
     $link_sito = $_POST['link-sito'];
 
     /* Setto il time local e richiedo l'ora corrente */
