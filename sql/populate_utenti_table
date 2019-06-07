@@ -1,8 +1,3 @@
-/* la password è lo sha1() della stringa 'admin' */
-INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
-    VALUES (1,'Admin','root','root@info.it','d033e22ae348aeb5660fc2140aec35850c4da997', TRUE);
---
-
 /* per tutti gli utenti Admin la password è la stringa del nome minusola: es: 'luca' */
 INSERT INTO `utenti`(`id`, `nome`, `cognome`, `email`, `password`, `admin`)
     VALUES (2,'Luca','Aloi','luca.aloi@edu.unito.it','a05bd890c4868ea1807f8564055d1fba77c6ba81', TRUE);
