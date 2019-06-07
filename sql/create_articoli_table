@@ -6,28 +6,5 @@ CREATE TABLE `innovation`.`articoli` (
     `corpo` VARCHAR(500) NOT NULL ,
     `categoria` VARCHAR(50) NOT NULL ,
     `data` DATE NOT NULL ,
-    `gdrive` text NOT NULL,
+    `gdrive` text NULL,
         PRIMARY KEY (`id`)) ENGINE = InnoDB;
-
-INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (1,'TITOLO','SOTTOTITOLOLOLOLOOOOOOOOOOO','admin','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
-        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato.','start up', CURRENT_DATE, 'https://drive.google.com/open?id=108mvCFuJDoYFYlUXvpGxSeOdsUNnA5qj');
-
-
-INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (2,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','admin','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
-        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato.','web design', CURRENT_DATE , 'lhttps://www.theverge.com/2019/6/3/18651071/mac-pro-design-specs-hands-on-photos-video-price');
-
-
-INSERT INTO `articoli`(`id`, `titolo`, `sottotitolo`, `autore`, `corpo`, `categoria`, `data`, `gdrive`)
-    VALUES (3,'TITOLO1','SOTTOTITOLOLOLOLOOOOOOOOOOO2','root','Lorem Ipsum &egrave un testo segnaposto utilizzato nel settore
-        della tipografia e della stampa. Lorem Ipsum &egrave considerato il testo segnaposto standard sin dal sedicesimo
-        secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assembl&ograve per preparare un testo
-        campione. &Egrave sopravvissuto non solo a pi&ugrave di cinque secoli, ma anche al passaggio alla videoimpaginazione,
-        pervenendoci sostanzialmente inalterato.','web design', CURRENT_DATE , 'https://medium.com/@alexewerlof/a-brief-history-about-apis-f1be2f59c858');
