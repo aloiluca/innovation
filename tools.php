@@ -16,8 +16,8 @@ if (mysqli_num_rows($result) > 0)
 {
     while ($row = mysqli_fetch_assoc($result)) {
 
-        $nome = $row["nome"];
-        $tipologia = $row["tipo"];
+        $nome = replace_special_character($row["nome"]);
+        $tipologia = replace_special_character($row["tipo"]);
         $data_insert = $row["data_insert"];
         $id = $row["id"];
 

@@ -2,6 +2,7 @@
 
 require 'config/database.php';
 require 'partials/header.php';
+require 'partials/functions.php';
 
 /*messaggio: articolo cancellato correttamente */
 if ($_SESSION['articolo_cancellato']==TRUE) {
@@ -89,12 +90,12 @@ if ( isset($_POST['submit-filter']) ) {
 
                 while ($row = mysqli_fetch_assoc($result)) {
 
-                    $titolo = $row["titolo"];
-                    $sottotitolo = $row["sottotitolo"];
-                    $categoria = $row["categoria"];
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
                     $data = $row["data"];
                     $id = $row["id"];
-                    $autore = $row["autore"];
+                    $autore = replace_special_character($row["autore"]);
 
                     /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
                     $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
@@ -131,12 +132,12 @@ if ( isset($_POST['submit-filter']) ) {
 
                 while ($row = mysqli_fetch_assoc($result)) {
 
-                    $titolo = $row["titolo"];
-                    $sottotitolo = $row["sottotitolo"];
-                    $categoria = $row["categoria"];
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
                     $data = $row["data"];
                     $id = $row["id"];
-                    $autore = $row["autore"];
+                    $autore = replace_special_character($row["autore"]);
 
                     /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
                     $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
@@ -184,9 +185,9 @@ if ( isset($_POST['submit-filter']) ) {
 
                 while ($row = mysqli_fetch_assoc($result)) {
 
-                    $titolo = $row["titolo"];
-                    $sottotitolo = $row["sottotitolo"];
-                    $categoria = $row["categoria"];
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
                     $data = $row["data"];
                     $id = $row["id"];
 
@@ -223,12 +224,12 @@ else {
 
         while ($row = mysqli_fetch_assoc($result)) {
 
-            $titolo = $row["titolo"];
-            $sottotitolo = $row["sottotitolo"];
-            $categoria = $row["categoria"];
+            $titolo = replace_special_character($row["titolo"]);
+            $sottotitolo = replace_special_character($row["sottotitolo"]);
+            $categoria = replace_special_character($row["categoria"]);
             $data = $row["data"];
             $id = $row["id"];
-            $autore = $row["autore"];
+            $autore = replace_special_character($row["autore"]);
 
             /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
             $img = 'articolo' . $id . '.jpg'; // articolo1.jpg

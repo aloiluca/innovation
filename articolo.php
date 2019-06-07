@@ -1,6 +1,7 @@
 <?php
 require 'config/database.php';
 require 'partials/header.php';
+require 'partials/functions.php';
 
 ?>
 
@@ -15,14 +16,14 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) != 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $titolo = $row["titolo"];
-        $sottotitolo = $row["sottotitolo"];
-        $categoria = $row["categoria"];
+        $titolo = replace_special_character($row["titolo"]);
+        $sottotitolo = replace_special_character($row["sottotitolo"]);
+        $categoria = replace_special_character($row["categoria"]);
         $data = $row["data"];
         $corpo = $row['corpo'];
         $preview = substr($corpo,0,250);
-        $autore = $row['autore'];
-        $gdrive = $row['gdrive'];
+        $autore = replace_special_character($row['autore']);
+        $gdrive = replace_special_character($row['gdrive']);
         echo '
               <div class="divtesto">
                   <p class=\'titolotesto\'>' . $titolo . '</p>
@@ -47,7 +48,7 @@ if (mysqli_num_rows($result) != 0) {
             }
         if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
             echo "<form action='articolo.php' method='POST'>
-            <input type='hidden' style='display:none' name='id' value='" . $_POST['id'] . "'>
+            <input type='hidden' name='id' value='" . $_POST['id'] . "'>
             <button type='submit' name='delete_articolo' class='delete_button'>DELETE</button>
             </form>";
             }
