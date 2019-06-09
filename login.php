@@ -1,6 +1,5 @@
 <?php
 require 'partials/header.php';
-require 'config/database.php';
 
 /* Se 'submit-button' è settato: */
 if ( isset( $_POST['submit-button'])) {
@@ -35,11 +34,11 @@ if ( isset( $_POST['submit-button'])) {
                     if ($row['admin'] == TRUE) {
                         $_SESSION['admin'] = TRUE;
                         header("Location: /innovation/admin.php");
-                        //exit;
+
                     } else {
                         /* Reindirizzo a community.php */
                         header("Location: /innovation/index.php");
-                        //exit;
+
                     }
 
                 } else {

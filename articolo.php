@@ -1,6 +1,6 @@
 <?php
 require 'partials/header.php';
-require 'config/database.php';
+
 
 ?>
 

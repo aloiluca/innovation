@@ -1,8 +1,5 @@
 <?php
 require 'partials/header.php';
-require 'config/database.php';
-
-
 
 /* Se submit button è settato: */
 if (isset($_POST['submit-button'])) {

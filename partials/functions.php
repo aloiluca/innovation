@@ -11,12 +11,18 @@
  * @param string $db
  * @return bool|false|mysqli
  */
-function getConnection($servername, $username, $password, $db){
-    $conn= mysqli_connect($servername, $username, $password, $db);
+function getConnection($servername, $username, $password, $database){
+    $conn= mysqli_connect($servername, $username, $password );
+    $db = mysqli_select_db($conn, $database);
+
     if (!$conn) {
         return false;
     }
+    elseif (!$db) {
+        return false;
+    }
     else{
+//        echo "connessi al database: $database";
         return $conn;
     }
 }

@@ -3,7 +3,7 @@
 //ini_set("display_errors", 1); // Imposta il valore di un'opzione di configurazione ($var,$value)
 
 require 'partials/functions.php';
-
+require 'config/database.php';
 
 session_start();    // Start della sessione
 
@@ -11,6 +11,7 @@ session_start();    // Start della sessione
 if (!isset($_SESSION['logged'])) {
     $_SESSION['articolo_cancellato'] = FALSE;
 }
+
 ?>
 
 <!-- <head> del sito web -->

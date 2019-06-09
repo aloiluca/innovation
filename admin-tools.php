@@ -1,6 +1,6 @@
 <?php
 require 'partials/header.php';
-require 'config/database.php';
+
 
 
 if( isset( $_POST['crea_tool']) ){

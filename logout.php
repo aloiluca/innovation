@@ -4,6 +4,5 @@
 session_start();
 session_destroy();
 header("Location: /innovation/index.php");
-exit;
 
 ?>
