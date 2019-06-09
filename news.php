@@ -6,7 +6,6 @@ if ($_SESSION['articolo_cancellato']==TRUE) {
     echo "articolo cancellato correttamente";
     $_SESSION['articolo_cancellato'] = FALSE;
   }
-
 ?>
 
 
@@ -32,16 +31,20 @@ if ($_SESSION['articolo_cancellato']==TRUE) {
                 <div class="search">
                     <label>Autori</label>
                     <select name="autore">
-                        <option value="autore"></option>
-                        <option value="admin">admin</option>
-                        <option value="Luca">Luca</option>
-                        <option value="Gabriele">Gabriele</option>
-                        <option value="Matteo">Matteo</option>
-                        <option value="Flavio">Flavio</option>
-                        <option value="Elisa">Elisa</option>
-                        <option value="Rachele">Rachele</option>
-                        <option value="Andrea">Andrea</option>
-                        <option value="Mahdi">Mahdi</option>
+                        <option value="autore"> --Select-- </option>
+
+                        <?php
+                        $sql = "SELECT DISTINCT(autore) FROM articoli";
+                        $result = mysqli_query($conn,$sql);
+
+
+                        $autori = ['--Select--'];
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $autore = $row["autore"];
+                            echo "<option value='$autore'>$autore</option>";
+                        }
+                        ?>
                     </select>
                 </div>
 
