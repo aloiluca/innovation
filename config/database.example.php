@@ -6,5 +6,5 @@
 
 /* Inserire le variabili per connessione al database */
 
-getConnection('','','','');
+$conn = getConnection('','','','');
 
