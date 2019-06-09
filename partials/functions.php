@@ -2,13 +2,17 @@
 
 /**
  * Questa funzione riceve 4 parametri di tipo stringa ed esegue la connessione al database:
- * - in caso di successo restituisce l'oggetto di tipo mysqli.
+ *
+ * 1. Esegue la connessione all HostServer.
+ * 2. Si connette al database richiesto.
+ *
+ * - in caso di successo restituisce un oggetto di tipo mysqli.
  * - in caso di fallimento restituisce false.
  *
  * @param string $servername
  * @param string $username
  * @param string $password
- * @param string $db
+ * @param string $database
  * @return bool|false|mysqli
  */
 function getConnection($servername, $username, $password, $database){
@@ -27,33 +31,47 @@ function getConnection($servername, $username, $password, $database){
     }
 }
 
-
-
-
 /**
- * Questa riceve 2 parametri:
- * - la connessione al database.
- * - un path di un file in cui si trovano 1 o più migration/query da eseguire su un database:
  *
- * Se sono presenti più query vengono separate dalla stringa '--' ed eseguite una alla volta:
- * sempre per ogni query , in caso di fallimento viene stampato un messaggio di errore che stampa la query fallita.
+ *  La funzione riceve 2 parametri:
+ * - la connessione al database.
+ * - un array contenente i path dei file in cui si trovano gli statement da eseguire sul database:
+ *
+ * Se sono presenti più query all'interno dello stesso file vengono separate dalla stringa '--' ed eseguite una alla volta:
+ *
+ * Per ogni query, in caso di errore viene inserito l'elemento $nome_file => $query all'iterno dell'array $result_array.
+ * Nel caso in cui la query avvenga con successo viene inserito invece l'elemento $nome_file => 'Eseguita correttamente'.
+ *
+ * In ogni caso la funzione restituisce l'array $result_array che contiene appunto quali query sono eseguite correttamente
+ * e quali invece hanno riscontrato degli errori.
  *
  * @param mysqli $connection
- * @param string $migration_file
- * @throws Exception
+ * @param array $migration_files
+ * @return array $result_array
  */
-function migrate($connection, $migration_file) {
+function migrate($connection, array $migration_files) {
 
-    $sql = file_get_contents($migration_file);
-    $array_statement = explode('--', $sql);
+    $result_array = array();
 
-    foreach ( $array_statement as $migration) {
-        $result = mysqli_query($connection, $migration);
+    foreach ($migration_files as $index => $migration ) {
 
-        if (!$result) {
-            echo "La seguente query non è stata eseguita: $migration <br>";
+        $content = file_get_contents($migration);
+        $array_statements = explode('--', $content);
+
+        foreach ($array_statements as $statement) {
+            $result = mysqli_query($connection, $statement);
+
+            if (!$result) {
+                $error = [$migration => 'Errore' ];
+                $result_array = array_merge($result_array , $error);
+            }
+            else {
+                $success = [$migration => 'Eseguita correttamente' ];
+                $result_array = array_merge($result_array , $success);
+            }
         }
     }
+    return $result_array;
 }
 
 
