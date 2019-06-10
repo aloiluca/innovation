@@ -1,5 +1,3 @@
-<?php
-?>
 <div class="footer">
     <div class="footerFloat">
         <img class="logo" src="resources/img/cactuspen.png">

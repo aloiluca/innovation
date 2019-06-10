@@ -15,22 +15,26 @@ if (isset($_POST['submit-button'])) {
         $pwd_verify = trim($_POST['password_verify']);
 
 
-        /* Se le 2 password combaciano: altrimenti errore. */
+        $sql = "SELECT * FROM utenti where email = '" . $email . "';";
+        $result = mysqli_query($conn, $sql);
 
-        /* Assegnazione di variabile in modo condizionale: $var = (condtion) ? true : false */
-        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
+        /* Se $result è = 0 l'utente non è registato*/
+        if (mysqli_num_rows($result) == 0) {
 
-        if ($hash != '') {
+            /* Se le 2 password combaciano: altrimenti errore. */
 
-            $sql = "SELECT * FROM utenti where email = '" . $email . "';";
-            $result = mysqli_query($conn, $sql);
+            /* Assegnazione di variabile in modo condizionale: $var = (condtion) ? true : false */
+            $hash = ($password == $pwd_verify) ? sha1($password) : '';
 
-            /* Se $result è = 0 l'utente non è registato*/
-            if (mysqli_num_rows($result) == 0) {
+            if ($hash != '') {
+
+                $sql = "SELECT * FROM utenti where email = '" . $email . "';";
+                $result = mysqli_query($conn, $sql);
+
 
                 /* Preparo ed eseguo la query: */
                 $sql = "INSERT INTO `utenti`( `nome`, `cognome`, `email`, `password`,`admin`)
-                    VALUES ('" . $nome . "','" . $cognome . "','" . $email . "','" . $hash . "',FALSE);";
+                        VALUES ('" . $nome . "','" . $cognome . "','" . $email . "','" . $hash . "',FALSE);";
 
                 $result = mysqli_query($conn, $sql);
 
@@ -46,17 +50,13 @@ if (isset($_POST['submit-button'])) {
                     echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
                     header("refresh: 1'; Location: /innovation/register.php");
                 }
-            }
-            else {
-                echo '<div class="error-message">L\'utente è già registrato</div>';
+            } else {
+                echo '<div class="error-message">Le 2 password non combaciano</div>';
             }
         }
-
         else {
-            echo '<div class="error-message">Le 2 password non cambaciano, riprova.</div>';
-            header("refresh:2'; Location: /register/register.php");
+            echo '<div class="error-message">Utente gia registrato.</div>';
         }
-
     }
     mysqli_close($conn);
 }
