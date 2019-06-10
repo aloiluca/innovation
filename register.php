@@ -16,45 +16,47 @@ if (isset($_POST['submit-button'])) {
 
 
         /* Se le 2 password combaciano: altrimenti errore. */
-        if ($password == $pwd_verify) {
-            $hash = sha1($pwd_verify);
-        }
+
         /* Assegnazione di variabile in modo condizionale: $var = (condtion) ? true : false */
-        //        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
+        $hash = ( $password == $pwd_verify ) ? sha1($password) : '';
+
+        if ($hash != '') {
+
+            $sql = "SELECT * FROM utenti where email = '" . $email . "';";
+            $result = mysqli_query($conn, $sql);
+
+            /* Se $result è = 0 l'utente non è registato*/
+            if (mysqli_num_rows($result) == 0) {
+
+                /* Preparo ed eseguo la query: */
+                $sql = "INSERT INTO `utenti`( `nome`, `cognome`, `email`, `password`,`admin`)
+                    VALUES ('" . $nome . "','" . $cognome . "','" . $email . "','" . $hash . "',FALSE);";
+
+                $result = mysqli_query($conn, $sql);
+
+
+                /* Se $result è stata eseguita correttamente: altrimenti stampo messaggio di errore */
+                /* var_dump((bool) 1);    OUTPUT:  bool(true) */
+                if ($result == 1) {
+
+                    /* L'utente è stato registrato: reindirizzo a login */
+                    header("Location: /innovation/login.php");
+
+                } else {
+                    echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
+                    header("refresh: 1'; Location: /innovation/register.php");
+                }
+            }
+            else {
+                echo '<div class="error-message">L\'utente è già registrato</div>';
+            }
+        }
 
         else {
             echo '<div class="error-message">Le 2 password non cambaciano, riprova.</div>';
             header("refresh:2'; Location: /register/register.php");
         }
 
-        $sql = "SELECT * FROM utenti where email = '" . $email . "';";
-        $result = mysqli_query($conn, $sql);
-
-        /* Se $result è = 0 l'utente non è registato*/
-        if (mysqli_num_rows($result) == 0) {
-
-            /* Preparo ed eseguo la query: */
-            $sql = "INSERT INTO `utenti`( `nome`, `cognome`, `email`, `password`,`admin`)
-                    VALUES ('" . $nome . "','" . $cognome . "','" . $email . "','" . $hash . "',FALSE);";
-
-            $result = mysqli_query($conn, $sql);
-
-
-            /* Se $result è stata eseguita correttamente: altrimenti stampo messaggio di errore */
-            /* var_dump((bool) 1);    OUTPUT:  bool(true) */
-            if ($result == 1) {
-
-                /* L'utente è stato registrato: reindirizzo a login */
-                header("Location: /innovation/login.php");
-
-            } else {
-                echo '<div class="error-message">Ci sono stati problemi durante durante la registrazione riprova.</div>';
-                header("refresh: 1'; Location: /innovation/register.php");
-            }
-        }
-        else {
-            echo '<div class="error-message">L\'utente è già registrato</div>';
-        }
     }
     mysqli_close($conn);
 }
