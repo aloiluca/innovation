@@ -111,3 +111,204 @@ function replace_special_character($text) {
     preg_replace('#€#', '&euro;', $text);  // Replace € with &euro;
     return $text;
 }
+
+
+/**
+ * La funzione prende 2 parametri, in base al 2° con uno switch decide quale query eseguire per mostare gli articoli.
+ *
+ * @param mysqli $conn
+ * @param string $scelta
+ */
+function getNews($conn, $scelta) {
+
+    switch ( $scelta ) {
+        case 'AllNews':
+            /* Stampo tutti gli articoli presenti nel database */
+            $sql = "SELECT * FROM articoli";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
+                    $data = $row["data"];
+                    $id = $row["id"];
+                    $autore = replace_special_character($row["autore"]);
+
+                    /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
+                    $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
+
+                    echo '
+                                
+                                
+                                <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
+                                    <form action="/innovation/articolo.php" method="POST">
+                                        <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
+                                        <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
+                                        <h4>' . $sottotitolo . '</h4>
+                                        <h6>Data: ' . $data . '</h6>
+                                        <p>Categoria: ' . $categoria . '</p>
+                                        <p>Autore: ' . $autore . '</p>
+                                    </form>
+                                </div> 
+                        ';
+                }
+            }
+            else {
+                echo '<p class="messaggio-avviso">Non è presente alcun articolo </p>';
+            }
+            break;
+        case 'ByCategory':
+
+            $categorie_scelte = $_POST["categorie_scelte"];
+
+            $stringa_categorie = implode(",", $categorie_scelte);
+
+            $singola_categoria = explode(",", $stringa_categorie);
+
+            /* Se è settata $singola_categoria[0] è uguale al valore, altrimenti uguale a stringa " "! */
+            $categoria1 = isset($singola_categoria[0]) ? $singola_categoria[0] : ' ';
+            $categoria2 = isset($singola_categoria[1]) ? $singola_categoria[1] : ' ';
+            $categoria3 = isset($singola_categoria[2]) ? $singola_categoria[2] : ' ';
+            $categoria4 = isset($singola_categoria[3]) ? $singola_categoria[3] : ' ';
+
+            $sql = "SELECT * FROM articoli WHERE categoria = '" . $categoria1 . "' OR categoria = '" . $categoria2 .
+                "' OR categoria = '" . $categoria3 . "' OR categoria = '" . $categoria4 . "';";
+
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
+                    $data = $row["data"];
+                    $id = $row["id"];
+                    $autore = replace_special_character($row["autore"]);
+
+                    /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
+                    $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
+
+                    echo '
+                       <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
+                           <form action="/innovation/articolo.php" method="POST">
+                                <div id="submit">
+                                    <h1><button type="submit" name="submit">' . $titolo . '</button></h1>
+                                </div>
+                                 <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
+                                 <h4>' . $sottotitolo . '</h4>
+                                 <p>Data: ' . $data . '</p>
+                                 <p>Categoria: ' . $categoria . '</p>
+                                 <p>Autore: ' . $autore . '</p>
+                            </form>
+                       </div>
+                                
+                        ';
+                }
+
+            } else {
+                echo '<p class="messaggio-avviso">Non ci sono articoli per la categoria scelta.</p> ';
+            }
+            break;
+        case 'ByAuthor':
+
+            $autore = $_POST["autore"];
+
+            $sql = "SELECT * FROM articoli WHERE autore = '" . $autore . "';";
+
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
+                    $data = $row["data"];
+                    $id = $row["id"];
+                    $autore = replace_special_character($row["autore"]);
+
+                    /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
+                    $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
+
+                    echo '
+                       <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
+                           <form action="/innovation/articolo.php" method="POST">
+                                <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
+                                 <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
+                                 <h4>' . $sottotitolo . '</h4>
+                                 <h6>Data: ' . $data . '</h6>
+                                 <p>Categoria: ' . $categoria . '</p>
+                                 <p>Autore: ' . $autore . '</p>
+                            </form>
+                       </div>
+                                
+                        ';
+                }
+
+            } else {
+                echo '<p class="messaggio-avviso">Non ci sono articoli per l\'autore scelto.</p> ';
+            }
+
+            break;
+        case 'ByAllFilter';
+
+            $categorie_scelte = $_POST["categorie_scelte"];
+
+            $stringa_categorie = implode(",", $categorie_scelte);
+
+            $singola_categoria = explode(",", $stringa_categorie);
+
+            /* Se è settata $singola_categoria[0] è uguale al valore, altrimenti uguale a stringa " "! */
+            $categoria1 = isset($singola_categoria[0]) ? $singola_categoria[0] : ' ';
+            $categoria2 = isset($singola_categoria[1]) ? $singola_categoria[1] : ' ';
+            $categoria3 = isset($singola_categoria[2]) ? $singola_categoria[2] : ' ';
+            $categoria4 = isset($singola_categoria[3]) ? $singola_categoria[3] : ' ';
+
+            $autore = $_POST["autore"];
+
+            $sql = "SELECT * FROM articoli WHERE (autore = '" . $autore . "') && (categoria = '" . $categoria1 . "' OR categoria = '" . $categoria2 .
+                "' OR categoria = '" . $categoria3 . "' OR categoria = '" . $categoria4 . "');";
+            $result = mysqli_query($conn, $sql);
+
+
+            if (mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    $titolo = replace_special_character($row["titolo"]);
+                    $sottotitolo = replace_special_character($row["sottotitolo"]);
+                    $categoria = replace_special_character($row["categoria"]);
+                    $data = $row["data"];
+                    $id = $row["id"];
+
+                    /* Il nome dell'immagine dell'articolo è data dalla stringa 'articolo' + id + '.jpg' */
+                    $img = 'articolo' . $id . '.jpg'; // articolo1.jpg
+
+                    echo '
+                       <div style="background-image:url(resources/img/articoli/' . $img . ')"; class="articolo">
+                           <form action="/innovation/articolo.php" method="POST">
+                                <h1><button type="submit" id="submit" name="submit">' . $titolo . '</button></h1>
+                                 <input style="display:none" type="hidden" name="id" value="' . $id . '"></p>
+                                 <h4>' . $sottotitolo . '</h4>
+                                 <h6>Data: ' . $data . '</h6>
+                                 <p>Categoria: ' . $categoria . '</p>
+                                 <p>Autore: ' . $autore . '</p>
+                            </form>
+                       </div>
+                                
+                        ';
+                }
+
+            } else {
+                echo '<p class="messaggio-avviso">Non ci sono articoli per i filtri scelti </p>' ;
+            }
+            break;
+    }
+}
